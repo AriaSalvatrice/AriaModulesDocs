@@ -17,7 +17,7 @@
   .box
     width 30rem
     max-width 90vw
-    margin 5rem
+    margin 5rem 0
     padding 1.5rem
     color $lightest alpha($darkest, 0.8)
     box-shadow -12px 12px $darkest
@@ -25,6 +25,7 @@
     font-size 1.2rem
     .jack
       padding 1.2rem 1rem 0.1rem 1rem
+      display none
     a:link, a:visited
       text-decoration underline
       color $pink
@@ -42,6 +43,12 @@
         position absolute
         left -1rem
         content "☆"
+@screen lg
+  .boxcontainer
+    .box
+      margin 5rem
+      .jack
+        display inline-block
 </style>
 
 <script>

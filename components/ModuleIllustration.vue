@@ -22,7 +22,7 @@
     z-index -100
   .imagecontainer
     position fixed
-    top 10rem
+    top 7rem
     box-shadow -12px 12px $darkest
     border 3px solid $darkest
   img

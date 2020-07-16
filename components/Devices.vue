@@ -12,7 +12,7 @@ section#cards
   DeviceMenuItem(
     slug="qqqq"
     title="Quatherina’s Quality Quad Quantizer"
-    description="Quatherina the Quantum Duck presents her polyphonic Quantizers with custom & Poly External Scales, scenes, offset, S&H, transposition, and lead sheet chords parsing."
+    description="Quatherina the Quantum Duck presents her polyphonic Quantizers with too many features. Includes QQQQ, Quack, Q<, and Quale."
     rotate="2"
     skewX="-2"
     skewY="7"
@@ -38,8 +38,8 @@ section#cards
   )
   DeviceMenuItem(
     slug="arcane"
-    title="Arcane, Atout, Aleister"
-    description="Today’s fortune ★\n I hope luck is on your side."
+    title="Arcane"
+    description="Arcane, Atout & Aleister:\nToday’s fortune ★\n\nI hope luck is on your side."
     rotate="4"
     skewX="8"
     skewY="-11"

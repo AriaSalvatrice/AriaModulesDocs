@@ -35,13 +35,16 @@
 
           Going **Forward⯈** on all steps but the last can lead you to the node to the top-right of the current one, or that to the bottom-right, depending on the **Route** probability. On the last step, it leads back to the first one.
 
-      ModuleBox(align="right" jack="in" to="darius" :x="57/960" :y="402/760")
+      ModuleBox(align="right" jack="in" to="darius" :x="411/960" :y="440/760")
         :markdown-it
           On each node, you will find these jacks and knobs:
-
+        ModuleImageInsert(src="/modules/darius/node.png").float-right
+        :markdown-it
           - **CV Knob** (left): sets the CV/Note value of that step.
           - **Route Knob** (right): alters the probability to pick the top or the bottom node on the next step when stepping **Forward⯈**. If the knob's arrow points to the right, that means 50/50. They're not present on the last step, since it always leads back to the first. Because of floating point math imprecision, sometimes the probabilities displayed on the LCD are off by 0.1%.
           - **Gate Output**: when the node is active, passes through the gate or step inputs received on any of the directional inputs, or sends 10V continuously if no step input is plugged in.
+
+      hr
 
       Protip(align="center")
         :markdown-it
@@ -82,7 +85,7 @@
 
           The priority, from most to least important, is **Forward⯈** > **Up⯅** > **Down⯆** > **⯇Back**.
 
-          If you want a different priority, you can patch logic gates with modules such as [Count Modula's](https://github.com/countmodula/VCVRackPlugins) to do that. If the priorities aren't working as expected, do not forget that every single cable a signal travels through adds at least one sample of delay, so your triggers might not be actually simultaneous.
+          If you want a different priority, you can patch logic gates with modules such as [Count Modula's](https://library.vcvrack.com/CountModula) to do that. If the priorities aren't working as expected, do not forget that every single cable a signal travels through adds at least one sample of delay, so your triggers might not be actually simultaneous.
       Protip(align="center")
         :markdown-it
           You just need the **Forward⯈** input, really. Ignore the others, I just added them because some nerds wouldn't stop bothering me about it on Github.
@@ -134,19 +137,20 @@
           Try out alternating, every bar, sending it an arbitrary fixed voltage such as 4.58V then 0V, to create call-and-response phrases where the first part is always the same.
       ModuleBox
         :markdown-it
-          **1st/All Rocker Switch**: Decides whether to store the random seed and plan out the route when on the first node, or whether to use a fresh random seed and flip the coin at moment to decide the node forward.
+          **1st/All Rocker Switch**: Decides whether plan out the route on the first step, or whether to flip the coin at last moment.
 
           In **1st** mode, going back and forth repeatedly results in the same path (unless you alter the routes), until the first node is reached from step 8 (it won't refresh it if you reach the first node from stepping back). In effect, it acts as a sample and hold for the **Random** input at the exact moment the first node is _left_.
 
 
     ModuleSubSection(subtitle="Right-click options" align="right")
       ModuleBox(align="right")
+        ModuleImageInsert(src="/modules/darius/menu.png").float-left
         :markdown-it
           Via the **right-click menu**, you can load various presets for the CV and routes, and copy/paste [Portable Sequences](https://github.com/squinkylabs/SquinkyVCV/blob/master/docs/clipboard-format.md).
 
           When you **Copy** a sequence, you copy one random possible path Darius could take (or the current path it will take if there is an external **Random** seed).
 
-          When you **Paste** a sequence, you paste its first 8 notes to each step, rather than each node: each node of a same step will receive the same note, for you to use as a new point of departure.
+          When you **Paste** a sequence, you paste its first 8 notes to each step, rather than each node: each node of a same step will receive the same note for you to use as a new point of departure.
 
           After pasting, be sure to set the **Min** and **Max** knobs to the maximum range to obtain accurate data.
 
@@ -154,7 +158,7 @@
     ModuleSubSection(subtitle="Warning!" align="left")
       ModuleBox(align="left")
         :markdown-it
-          **Darius** is named after Taito's eponymous shoot-em-up arcade game series, known for its surreal visuals, its fish-themed enemies, its [unique soundtracks](https://www.youtube.com/watch?v=6FEdlAL3bX0), its multi-display arcade cabinets, and for allowing the player to select their route through the game via a branching map.
+          **Darius** is named after Taito's eponymous shoot-em-up arcade game series, known for its surreal visuals, its fish-themed enemies, its [unique soundtracks](https://www.youtube.com/watch?v=6FEdlAL3bX0), its multi-display arcade cabinets, and for allowing the player to select their route through the game via a branching map that inspired the module's main gimmick.
 
           A silhouette of **King Fossil** adorns the module.
 
@@ -164,7 +168,7 @@
 
           Many of its apparent limitations can be overcome with a bit of creative patching.
 
-          It works wonderfully with [Stoermelder](https://github.com/stoermelder/vcvrack-packone)'s [CV-MAP](https://github.com/stoermelder/vcvrack-packone/blob/v1/docs/CVMap.md) and [8FACE](https://github.com/stoermelder/vcvrack-packone/blob/v1/docs/EightFace.md) to give you CV control over the knobs and add multiple preset banks.
+          It works wonderfully with [Stoermelder](https://library.vcvrack.com/Stoermelder-P1)'s [CV-MAP](https://library.vcvrack.com/Stoermelder-P1/CVMap) to give you CV control over the knobs, and [8FACE](https://library.vcvrack.com/Stoermelder-P1/EightFace) to make it easy to switch between multiple preset banks.
 
 
 

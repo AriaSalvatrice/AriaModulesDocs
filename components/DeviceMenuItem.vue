@@ -102,7 +102,7 @@ export default {
     },
     bgimage() {
       return {
-        'background-image': 'url(/modules/bw-modules/' + this.slug + '.jpg), var(--gradient)'
+        'background-image': 'url(/modules/' + this.slug + '/bw.png), var(--gradient)'
       }
     }
   }

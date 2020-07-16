@@ -12,9 +12,13 @@ footer
   p
     margin 2rem 1rem 0 0
     font-family $francois
-    font-size 2rem
+    font-size 1rem
     color $pink
     text-shadow -2px 1px $darkest, -1px -1px 0 $darkest, 1px -1px 0 $darkest, -1px 1px 0 $darkest, 1px 1px 0 $darkest
     transform rotate(-3deg) skew(24deg, -3deg)
+@screen md
+  footer
+    p
+      font-size 2rem
 
 </style>

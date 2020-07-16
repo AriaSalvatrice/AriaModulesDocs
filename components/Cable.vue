@@ -62,6 +62,7 @@ transition(name="fadecable")
 
 <style lang="stylus" scoped>
 .cableoverlay
+  display none
   position fixed
   top 0
   left 0
@@ -74,6 +75,9 @@ transition(name="fadecable")
     stroke $lightest
   .outer
     stroke $darkest
+@screen lg
+  .cableoverlay
+    display block
 
 .fadecable-enter-active, .fadecable-leave-active, .fadecable-appear-active
   transition all 0.1s

@@ -53,9 +53,11 @@ header.welcome
   color $pink
   text-shadow -6px 3px $dark, -1px -1px 0 $dark, 1px -1px 0 $dark, -1px 1px 0 $dark, 1px 1px 0 $dark
   position absolute
+  margin-left 3rem
   z-index 200
 @screen lg
   #title-effect
+    margin-left 0
     padding 0
     transform rotate(-11deg)
     transform-origin top left
@@ -111,7 +113,7 @@ header.welcome
   font-size 1rem
   text-shadow -2px 1px #083d45, -1px -1px 0 #083d45, 1px -1px 0 #083d45, -1px 1px 0 #083d45, 1px 1px 0 #083d45
   margin auto
-  margin-top 12rem
+  margin-top 16rem
   width 90%
   z-index 200
   a:link, a:visited

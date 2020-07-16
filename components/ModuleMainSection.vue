@@ -8,20 +8,26 @@ section.modulesection(v-observe-visibility="{callback: updateVisibility}")
 
 <style lang="stylus" scoped>
 .modulesection
-  min-height 100vh
-  margin 15rem 0 75vh 0
+  margin 5rem 0 15vh 0
   .titlealign
     @apply flex flex-col;
     h1
       width 30rem
       max-width 90vw
-      margin 0 5rem 0
       padding 1rem
       box-shadow -12px 12px $darkest
       font-size 3rem
       font-family $francois
       color $lightest $dark
       text-shadow: -3px 3px #00000088
+@screen lg
+  .modulesection
+    min-height 100vh
+    margin 15rem 0 75vh 0
+    .titlealign
+      h1
+        margin 0 1rem 0
+
 </style>
 
 <script>

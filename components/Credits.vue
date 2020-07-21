@@ -30,17 +30,19 @@ Thanks to my music-making LGBBQT internet shitposting gang for introducing me to
 <big>But most of all, thanks to YOU for using my art.</big>
 
 The modules use the following fonts:
-- [Francois One](https://fonts.google.com/specimen/Francois+One) by [Vernon Adams](http://sansoxygen.com/)
-- [Nova](https://fontlibrary.org/en/font/nova) by [Wojciech Kalinowski](https://fontlibrary.org/en/member/wmk69)
-- [Fixed_v01](http://www.orgdot.com/aliasfonts/index.htm) by [Orgdot](http://www.orgdot.com/aliasfonts/index.htm)
+- [Francois One](https://fonts.google.com/specimen/Francois+One) by [Vernon Adams](http://sansoxygen.com/) for titles.
+- [Nova](https://fontlibrary.org/en/font/nova) by [Wojciech Kalinowski](https://fontlibrary.org/en/member/wmk69) for faceplages.
+- [Fixed_v01](http://www.orgdot.com/aliasfonts/index.htm) by [Orgdot](http://www.orgdot.com/aliasfonts/index.htm) for LCDs.
+- [DSEG](https://www.keshikan.net/fonts-e.html) by [Keshikan](https://www.keshikan.net/) for segment displays.
+
 
 The **Arcane** module uses Tarot cards altered from [Yoav Ben-Dov's CBD Tarot](https://www.cbdtarot.com/).
 
 The **UnDuLaR** module background uses the traditional yagasuri kimono pattern as provided by [ULOCO, UOTOMIZU](https://forallcreators.com/yagasuri-background/).
 
-[QuickJS](https://github.com/tonaljs/tonal) is used in some modules under the terms of the [MIT license](doc/LICENSE_TonalJs.txt)
+[QuickJS](https://github.com/tonaljs/tonal) is used in some modules under the terms of the [MIT license](https://github.com/AriaSalvatrice/AriaVCVModules/tree/master/doc/LICENSE_TonalJs.txt)
 
-[TonalJS](https://bellard.org/quickjs/) is used in some modules under the terms of the [MIT license](doc/LICENSE_QuickJS.txt)
+[TonalJS](https://bellard.org/quickjs/) is used in some modules under the terms of the [MIT license](https://github.com/AriaSalvatrice/AriaVCVModules/tree/master/doc/LICENSE_QuickJS.txt)
 
 :::
 </template>
@@ -89,7 +91,6 @@ export default {
 #credits h2
   font-family $abril
   margin auto
-  width 100%
   font-size 2rem
   background-image linear-gradient(90deg, #00000044 0%, #00000000 100%)
   border 2px solid $pink
@@ -102,9 +103,13 @@ export default {
   text-shadow none
 @screen md
   #credits h2
-    width 700px
+    width 600px
     font-size 4rem
 @screen lg
+  #credits h2
+    width 800px
+    font-size 4rem
+@screen xl
   #credits h2
     width 1000px
     font-size 4rem

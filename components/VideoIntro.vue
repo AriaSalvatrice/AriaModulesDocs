@@ -1,7 +1,7 @@
 <!-- FIXME: All of those should be sub-components -->
 <template lang="pug">
 section#videointro
-  h2 Video Intro To the Collection
+  h2 Collection Video Intro
   p [Placeholder video]
   iframe(
     width='560'
@@ -22,7 +22,7 @@ export default {
 #videointro h2
   font-family $abril
   margin auto
-  width 100%
+  width 90%
   font-size 2rem
   background-image linear-gradient(90deg, #00000044 0%, #00000000 100%)
   border 2px solid $pink
@@ -38,11 +38,13 @@ export default {
     font-size 4rem
 @screen lg
   #videointro h2
-    width 1000px
+    margin-left 150px
+    width 900px
     font-size 4rem
 
 #videointro iframe
-  width 100%
+  width 90%
+  margin-left 1rem
   box-shadow -24px 12px $dark, -3px -3px 0 $dark, 3px -3px 0 $dark, -3px 3px 0 $dark, 3px 3px 0 $dark
 @screen lg
   #videointro iframe

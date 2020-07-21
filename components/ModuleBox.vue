@@ -19,7 +19,7 @@
     max-width 90vw
     margin 5rem 0
     padding 1.5rem
-    color $lightest alpha($darkest, 0.8)
+    color $lightest alpha($darkest, 0.86)
     box-shadow -12px 12px $darkest
     text-shadow -1px 1px #00000088
     font-size 1.2rem
@@ -39,10 +39,21 @@
     ul
       li
         position relative
+        margin-bottom 1.2rem
       li:before
         position absolute
         left -1rem
         content "☆"
+    ol
+      li
+        position relative
+        counter-increment i
+        margin-bottom 1.2rem
+      li:before
+        position absolute
+        left -1.2rem
+        content counter(i) "."
+
 @screen lg
   .boxcontainer
     .box

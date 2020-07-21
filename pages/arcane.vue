@@ -125,11 +125,16 @@
 
   ModuleMainSection(title="Aleister" illustration="aleister")
     ModuleSubSection(subtitle="Binary pattern expander")
-      ModuleBox(jack="in" to="aleister" :x="337/690" :y="107/760")
+      ModuleBox
         :markdown-it
           The third module, **Aleister**, gives you access to the **_Bâtons_**, **_Coupes_**, **_Deniers_**, and **_Épées_** binary patterns as series of 16 outputs sending continuously either 0V or 10V, rather than as a rhythmic pattern of gates. If you connect only the first output of a group, it will instead be a polyphonic cable outputting the entire group. **Aleister** takes 14hp of space.
 
-          You can employ **Aleister**'s services as a standalone module, but when placed directely the right of either **Arcane** or **Atout**, the module will act as an expander, lighting up the jacks in sync with the rightmost connected output of the corresponding pattern on the parent module. Try it out, you'll understand what it does immediately.
+      ModuleBox(jack="in" to="aleister" :x="114/690" :y="532/760")
+        :markdown-it
+          You can employ **Aleister**'s services as a standalone module, but when placed directely the right of either **Arcane** or **Atout**, **Aleister** will act as an expander, lighting up its jacks in sync with the rightmost connected output of the corresponding pattern on the parent module. In this example, it shows you what **Atout**'s **8th note _Coupes_** output is up to.
+
+          Try it out, you'll understand what it does immediately.
+
         ModuleImageInsert(src="/modules/arcane/expander.png").float-left
         :markdown-it
           When **Aleister** is connected to a parent module, the expander LEDs at the bottom light up.
@@ -143,15 +148,17 @@
           If the repository is unreachable, the module will will output 0V on all ports, except the quantizer, which will forward input as-is. You can find more information about the **Arcane** server, its API, and its source code, on [their GitHub repository](https://github.com/AriaSalvatrice/Arcane).
         ModuleImageInsert(src="/modules/arcane/new-oracle.png").float-left
         :markdown-it
-          If the module is active at the time a new fortune is drawn, the values will not change, but a notification a new fortune is available will appear on the **LCD**. Using the right-click menu, you can _Initialize_ the module to download the newest fortune. Every active instance of **Arcane**, **Atout** and **Aleister** have to be initialized spearately to update the fortune.
+          If the module is active at the time a new fortune is drawn, the values will not change, but a notification a new fortune is available will appear on the **LCD**. Using the right-click menu, you can _Initialize_ the module to download the newest fortune. Every active instance of **Arcane**, **Atout** and **Aleister** should be initialized spearately to update the fortune.
 
       ModuleBox(align="right")
         :markdown-it
           **There is no offline mode, and no built-in way to load older fortunes, by design.** These are multiplayer-only oracles. But I won't prevent you from editing the .json files in the `AriaSalvatrice/Arcane/` directory of your VCV Rack user directory, if you really must. Every downloaded fortune is archived locally, a full archive is available [from GitHub](https://github.com/AriaSalvatrice/Arcane), and if a local file exists for today, it will not be checked against the server.
 
-      ModuleBox(align="right")
+      Protip(align="right")
         :markdown-it
-          Quick tech remark about JSON API cache spoofing: such self-deception will never alter your true destiny, and it is unwise to cling to the past instead of living for a future you can yet change.
+          For advanced hackers only, here's more technical info about JSON API cache spoofing (only read this if you're an elite computer genius):
+
+          Such self-deception will never alter your true destiny, and it is unwise to cling to the past instead of living for a future you can yet change.
 
   ModuleMainSection(title="Arcane" displaytitle="none" illustration="cards")
     ModuleSubSection(subtitle="Final Wisdom" align="center")
@@ -159,7 +166,7 @@
         :markdown-it
           Using this series of modules to their full extent requires a bit of creative patching, a bit of lateral thinking, but most importantly, friends to share your different interpretations of the same fortune with.
 
-      Protip(align="center")
+      ModuleBox(align="center")
         :markdown-it
           If you treat my oracles as a mere random number generator, you will never gain any wisdom from them.
 

@@ -24,6 +24,7 @@ body
   background-image url('/modules/bg.jpg')
   background-size contain
   background-attachment fixed
+  overflow-x hidden
 
 em, i, code
   font-family $novascript

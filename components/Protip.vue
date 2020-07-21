@@ -12,12 +12,11 @@
 
 <style lang="stylus" scoped>
 .protipcontainer
-  @apply flex flex-col;
   .protip
     font-family $francois
     width 30rem
     max-width 90vw
-    margin 5rem
+    margin 1rem
     padding 1.5rem
     color $dark $yellow
     background-image url('/modules/protip.png')
@@ -34,18 +33,18 @@
     h3
       display inline-block
       font-family $abril
-      font-size 2rem
+      font-size 1.8rem
       span
-        font-size 1.4rem
+        font-size 1.2rem
     a:link, a:visited
       text-decoration underline
       color $pink
       transition color 0.4s
     a:focus, a:hover, a:active
-      color $yellow
+      color $light
     p
       margin-bottom 1.2rem
-    strong
+    strong, a
       color $pink
       text-shadow -1px -1px 0 $dark, 1px -1px 0 $dark, -1px 1px 0 $dark, 1px 1px 0 $dark
     ul
@@ -57,9 +56,11 @@
         content "☆"
 @screen md
   .protipcontainer
+    @apply flex flex-col;
     .protip
       transform skew(-8deg, -5deg)
       max-width 90vw
+      margin 5rem
       .dogwink
         top -2rem
         right -2rem

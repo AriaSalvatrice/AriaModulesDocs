@@ -132,12 +132,7 @@ export default {
     onUpdate(e) {
       this.viewportWidth = window.innerWidth
       this.viewportHeight = window.innerHeight
-
-      let rect = document.getElementById(this.to).getBoundingClientRect()
-      this.rect = rect
-
-      console.log( rect )
-
+      this.rect = document.getElementById(this.to).getBoundingClientRect()
     }
   },
   computed: {

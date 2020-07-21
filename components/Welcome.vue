@@ -33,12 +33,12 @@ header.welcome
         | They are the
         |
         span.signatureseries Aria Salvatrice Signature Series
-        | .  They’re growing into an integrated system for performing aleatoric techno. Lotsa artists use them for other styles too.
+        | .  They’re growing into an integrated system for performing aleatoric techno. Lotsa artists found them inspiring for many genres of music. You can grab them for free!
     #intro-2
       | heres the stuff ➞
 </template>
 
-<style lang="stylus" scoped> // FIXME: How to make it scoped without breaking the emoji?
+<style lang="stylus" scoped>
 .welcome
   @apply flex justify-end relative;
   .container
@@ -113,7 +113,7 @@ header.welcome
   font-size 1rem
   text-shadow -2px 1px #083d45, -1px -1px 0 #083d45, 1px -1px 0 #083d45, -1px 1px 0 #083d45, 1px 1px 0 #083d45
   margin auto
-  margin-top 16rem
+  margin-top 19rem
   width 90%
   z-index 200
   a:link, a:visited
@@ -148,6 +148,5 @@ header.welcome
     bottom -5rem
     text-shadow 4px 7px $dark, -2px -2px 0 $dark, 2px -2px 0 $dark, -2px 2px 0 $dark, 2px 2px 0 $dark
     margin-top 8rem
-
 
 </style>

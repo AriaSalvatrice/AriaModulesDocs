@@ -3,11 +3,13 @@
 
   ModuleIllustration#blank(src="/modules/blank/blank.png")
 
-  ModuleMainSection(title="Blank Plate" illustration="blank" align="left")
-    ModuleSubSection(subtitle="Honk" align="left")
-      ModuleBox(align="left")
+  ModuleMainSection(title="Blank Plate" illustration="blank")
+    ModuleSubSection(subtitle="Honk")
+      ModuleBox
         :markdown-it
           A complimentary **8hp Blank Plate** and **♥-head screwdriver** are included with every Signature Series module purchase.
+
+      hr
 
       ModuleBox(align="right")
         :markdown-it

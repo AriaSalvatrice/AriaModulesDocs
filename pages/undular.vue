@@ -62,14 +62,14 @@
 
           It will be a little bit jittery, I can't help it. Those locks will only work if the three corresponding cable inputs for that axis are unplugged.
 
-      Protip(align="center")
+      Protip(align="left")
         :markdown-it
           Kick Drum ➔ Envelope Follower ➔ Slew Limiter ➔ Attenuator ➔ Cable Tension input.
 
           You're welcome.
 
 
-      ModuleBox(align="right")
+      ModuleBox(align="center")
         :markdown-it
           Because **a misconfiguration makes it possible to lock yourself out of your rack**, **UnDuLar** does nothing for the 10 first seconds after initialization.
 
@@ -82,13 +82,13 @@
 
           **Known solution**: don't do that.
 
-      ModuleBox(align="left")
+      ModuleBox(align="right")
         :markdown-it
           You can only use a single instance of **UnDuLaR** in your patch, as multiple instances would just fight each other for control.
 
           Additional instances past the first one do nothing.
 
-      ModuleBox(align="center")
+      ModuleBox(align="right")
         :markdown-it
           **Make sure you triple check the module works to your expectations every single time you're about to take it on the stage**, especially after a Rack update!
 
@@ -96,13 +96,13 @@
 
           The only guarantee I offer is that zooming will cause you no end of trouble.
 
-      ModuleBox(align="right")
-        :markdown-it
-          Thanks to [Frank Buss' Shaker](https://library.vcvrack.com/FrankBuss/Shaker) for demonstrating it's possible to change these values from a module!
-
       Protip(align="center")
         :markdown-it
           Never hesitate to attempt all sorts of imbecilic party tricks you will regret immediately, such as connecting an oscillator to the controls, forcing you to jettison your rack before the onset of the seizure.
+
+      ModuleBox(align="center")
+        :markdown-it
+          Thanks to [Frank Buss' Shaker](https://library.vcvrack.com/FrankBuss/Shaker) for demonstrating it's possible to scroll the rack and alter cable properties from a module!
 
 
 </template>

@@ -18,7 +18,7 @@ div
 <script>
 export default {
   head: {
-    title: 'Aria Salvatrice VCV Rack-compatible Synthesizer Modules'
+    title: 'Aria Salvatrice Signature Series: VCV Rack-compatible Synthesizer Modules'
   }
 }
 </script>

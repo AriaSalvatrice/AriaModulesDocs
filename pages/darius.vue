@@ -44,9 +44,7 @@
           - **Route Knob** (right): alters the probability to pick the top or the bottom node on the next step when stepping **Forward⯈**. If the knob's arrow points to the right, that means 50/50. They're not present on the last step, since it always leads back to the first. Because of floating point math imprecision, sometimes the probabilities displayed on the LCD are off by 0.1%.
           - **Gate Output**: when the node is active, passes through the gate or step inputs received on any of the directional inputs, or sends 10V continuously if no step input is plugged in.
 
-      hr
-
-      Protip(align="center")
+      Protip(align="left")
         :markdown-it
           If someone tells you they're painstakingly programming **Darius** manually, they're lying. Everyone justs uses the Randomize buttons a few hundred times until they come up with a masterpiece.
 
@@ -70,7 +68,7 @@
       ModuleBox(align="right" jack="out" to="darius" :x="145/960" :y="251/760")
         :markdown-it
           **Reset**: Go back to the first node. After a reset, step signals are ignored for a millisecond. Doing that is a best practice to [avoid a lot of problems](https://github.com/MarcBoule/ImpromptuModular/#on-resets-clocks-and-run-states-).
-      ModuleBox(align="center")
+      ModuleBox(align="right")
         :markdown-it
           Those step inputs are generally connected to the corresponding output of a clock, but anything that sends gates or triggers will work. Triggers are accepted polyphonically, which is useful for creative self-patching via a [poly merge](/modules/splitmerge) module.
       ModuleBox(align="left")

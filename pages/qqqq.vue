@@ -21,7 +21,7 @@
 
           It only works with Twelve-tone Equal Temperament, the usual Western tuning system.
 
-          It provides four separate quantizer lines, each with a built-in scaler and offsetter to change the range of the signal, the ability to transpose the signal, and sample & hold.
+          It provides four separate quantizer lines, each with a built-in scaler and offsetter to change the range of the signal, the ability to transpose the signal, and Sample & Hold.
 
           You can save scales and chords in 16 slots.
 
@@ -149,19 +149,26 @@
           - **Unlit** - _Octaves Mode_: Quantizes the signal first, then transposes it up or down by full octaves.
           - **Yellow** - _Semitones Mode_: Transposes the signal up or down by a few semitones first, then quantizes it.
           - **Pink with dot** - _Scale degrees Mode_: Quantizes the signal first, then transposes the signal by a specific amount of scale degrees.
+
       ModuleBox(jack="out" to="qqqq" :x="148/600" :y="550/760")
         :markdown-it
-          **Sample & Hold / Track & Hold input**: When plugged in, instead of operating continuously, the quantizer will Sample & Hold or Track & Hold the signal. When you're quantizing a noisy source of modulation, it's useful to send it the same gate you'd send to the envelope that will play the note in question. The Sample & Hold is not polyphonic: a monophonic gate can drive a polyphonic column. And remember, signals move from top to bottom through the columns: the Sample & Hold only happens after processing everything above it.
+          **Sample & Hold / Track & Hold input**: When plugged in, instead of operating continuously, the quantizer will Sample & Hold or Track & Hold the signal. When you're quantizing a noisy source of modulation, it's useful to send it the same gate you'd send to the envelope that will play the note in question.
+
+          The **Sample & Hold / Track & Hold input** is not polyphonic: a monophonic gate can drive a polyphonic column. And remember, signals move from top to bottom through the columns: the Sample & Hold only happens after processing everything above it.
+
         ModuleImageInsert(src="/modules/qqqq/sh.png").float-right
         :markdown-it
           **Sample & Hold / Track & Hold toggle**: Swaps between the two modes for the input directly below it. Unlit is Sample & Hold, lit is Track & Hold.
+
+          What's the difference? Both **Sample & Hold** and **Track & Hold** allow you to only update the input voltage when a trigger or gate is received. **Sample & Hold** updates its memory when the trigger or gate is received, then waits for the next trigger or gate before updating again. **Track & Hold** continuously updates its memory while the gate is active instead.
+
       ModuleBox
         ModuleImageInsert(src="/modules/qqqq/visualize.png").float-right
         :markdown-it
           **Visualize**: Shows the quantized output on the piano display.
       ModuleBox(jack="in" to="qqqq" :x="148/600" :y="668/760")
         :markdown-it
-          **Output** - The quantized signal! Polyphony is defined by the **CV Input**.
+          **Output**: The quantized signal! Polyphony is defined by the **CV Input**. It's polyphonic, and you can have multiple channels active.
 
       Protip(align="right")
         :markdown-it
@@ -169,7 +176,7 @@
 
            Those people do all their music by reading books and thinking really hard about maths! It's true - check out your local library for more information.
 
-    ModuleSubSection(subtitle="Scene Menory")
+    ModuleSubSection(subtitle="Scene Memory")
       ModuleBox
         ModuleImageInsert(src="/modules/qqqq/scene.png").float-right
         :markdown-it
@@ -201,9 +208,6 @@
       ModuleBox(align="right")
         :markdown-it
           Under the hood, **QQQQ** makes use of [Tonal.js](https://github.com/tonaljs/tonal)' knowledge of chords. Yup, this module runs javascript! Same [QuickJS](https://bellard.org/quickjs/) engine as [VCV Prototype](https://vcvrack.com/Prototype). Of course, the number crunching is efficient C++, javascript usage is limited to what it does best - fuzzy text parsing.
-      ModuleBox(align="right")
-        :markdown-it
-          **KNOWN ISSUE**: **QQQQ** crashes when the chord input is over 120 characters long. I am looking into fixing this issue.
 
   ModuleMainSection(title="Quack" illustration="quack")
     ModuleSubSection(subtitle="Smaller 7hp version")
@@ -211,11 +215,19 @@
         :markdown-it
           **Quack** offers only a single quantizer line, and no LCD. Visualization is always enabled on **Quack**.
 
+      ModuleBox(jack="out" to="quack" :x="107.5/210" :y="184/760")
+        :markdown-it
+          Due to space contraints, the **Poly External Scale** input and output are not labeled.
+
   ModuleMainSection(title="Q<" illustration="q" align="right")
     ModuleSubSection(subtitle="Tiny 3hp version" align="right")
       ModuleBox(align="right")
         :markdown-it
-          **Q<** has no built-in way to set up the sale, nor any helpful reference what the knobs do: it's meant to be used primarily as an expander for **Quack**, or with a **Poly External Scale** input.
+          **Q<** has no built-in way to set the scale, nor any helpful reference what the knobs do: it's meant to be used primarily as an expander for **Quack**, so that the labels line up.
+
+      ModuleBox(jack="out" to="q" :x="21/90" :y="172/760" align="right")
+        :markdown-it
+          You can also use it with a **Poly External Scale** input.
 
   ModuleMainSection(title="Quale" illustration="quale")
     ModuleSubSection(subtitle="Chord ➔ Scale, Scale ➔ Chord")
@@ -235,7 +247,11 @@
 
       ModuleBox
         :markdown-it
-          **Quale** can be used as an expander with the entire **Qqqq** family: when **Quale** is placed to the left of **QQQQ**, its **Scale Output** is forwarded to **QQQQ**. When **Quale** is placed to the right of **QQQQ**, the scale from **QQQQ** is expressed as a chord on **Quale**'s **Chord Output**.
+          **Quale** can be used as an expander with the entire **QQQQ** family.
+
+          When **Quale** is placed to the left of **QQQQ**, its **Scale Output** is forwarded to **QQQQ**.
+
+          When **Quale** is placed to the right of **QQQQ**, the scale from **QQQQ** is expressed as a chord on **Quale**'s **Chord Output**.
 
       Protip
         :markdown-it

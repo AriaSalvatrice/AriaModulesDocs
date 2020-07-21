@@ -82,7 +82,7 @@ section#sidebar
 #sidebar h2
   color $dark $yellow
   background-image linear-gradient(90deg, #ffffff00 0%, #ffffff44 100%)
-@screen lg
+@screen xl
   #sidebar h2
     font-size 4rem
 #sidebar a, #post-page footer a
@@ -106,6 +106,9 @@ section#sidebar
   transform skew(0deg, 0deg) scale(1.2, 1.6) !important
   z-index 120
 @screen lg
+  #sidebar a
+    font-size 1.9rem
+@screen xl
   #sidebar a
     font-size 2.4rem
 </style>

@@ -21,8 +21,14 @@ export default {
       return this.$store.state.moduletitle.subtitle
     }
   },
+  head: {
+    meta: [
+      { hid: 'description', name: 'description', content: 'Cool and nice modules what for VCV Rack.' }
+    ]
+  }
 }
 </script>
+
 
 <style lang="stylus">
 .back

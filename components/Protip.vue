@@ -11,6 +11,12 @@
 </template>
 
 <style lang="stylus" scoped>
+@keyframes scroll
+  0%
+    background-position 0 0
+  100%
+    background-position -200px 600px
+
 .protipcontainer
   .protip
     font-family $francois
@@ -24,6 +30,7 @@
     border 3px solid $darkest
     font-size 1.2rem
     position relative
+    animation 12s linear infinite scroll
     .dogwink
       position absolute
       top -4.5rem

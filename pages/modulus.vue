@@ -40,7 +40,9 @@
           - **Modulissimus Salomonis Regis**: 16 maximum nodes, 89hp. You should not consider this one if this is your first ritual.
       ModuleBox(align="center")
         :markdown-it
-          While I recommend you get started on **Modulus Salomonis Regis**, the 8 nodes version, in this documentation, we will use a picture of **Modulellus Salomonis Regis**, the 4 nodes version, to fit on the screen easier. When **Modulus Salomonis Regis** is mentioned, it is generally interchangeable with any variant.
+          While I recommend you get started on **Modulus Salomonis Regis**, the 8 nodes version, in this documentation, we will use a picture of **Modulellus Salomonis Regis**, the 4 nodes version, to fit on the screen easier.
+
+          Whenever **Modulus Salomonis Regis** is mentioned on this page, it is interchangeable with the two other variants.
 
   ModuleMainSection(title="Modulus Salomonis Regis" illustration="modulellus" displaytitle="none" align="right")
     ModuleSubSection(subtitle="Getting started" align="right")
@@ -54,7 +56,7 @@
 
       ModuleBox(align="right")
         :markdown-it
-          Then, right-click the device and pick "Randomize all nodes"
+          Then, right-click the device and pick "Randomize all nodes" near the bottom.
         ModuleImageInsert(src="/modules/modulus/rightclick.png").float-left
 
       ModuleBox(jack="in" to="modulellus" :x="160/900" :y="633/760" align="right")
@@ -105,22 +107,22 @@
 
       ModuleBox(jack="out" to="modulellus" :x="60/900" :y="278/760" align="right")
         :markdown-it
-          **Walk**: Move one node to the left or right randomly. When reaching either edge, wraps around.
+          **Walk**: Move one node to the left or right randomly. When at either edge, wraps around.
         ModuleImageInsert(src="/modules/modulus/new.png").float-left.clear-both
         :markdown-it
           If the rocker switch is set to **New**, it will perform a random walk, 50/50. If it is set to **Any**, then there is 1 chance out of 3 of staying on the current step instead of walking.
 
       ModuleBox(jack="out" to="modulellus" :x="178/900" :y="278/760" align="right")
         :markdown-it
-          **Back**: Move one node to the left. When reaching the beginning, wraps around.
+          **Back**: Move one node to the left. When at the beginning, wraps around.
 
       ModuleBox(jack="out" to="modulellus" :x="207/900" :y="190/760" align="right")
         :markdown-it
-          **Forward**: Move one node to the right. When reaching the end, wraps around.
+          **Forward**: Move one node to the right. When at the end, wraps around.
 
       ModuleBox(align="right")
         :markdown-it
-          When multiple step inputs receive a gate or trigger at the exact same time, then inputs are processed in the following order of priority: **Queue** > **Teleport** > **Walk** > **Back** > **Forward**. The arrow displayed on the circle will remind you of this.
+          When multiple step inputs receive a gate or trigger at the exact same time, inputs are processed in the following order of priority: **Queue** > **Teleport** > **Walk** > **Back** > **Forward**. The arrow displayed on the summoning circle will remind you of this.
 
           You can exploit these priorities by sending different clock divisions to different inputs, or to patch a fallback option for the **Queue** input.
 
@@ -145,15 +147,21 @@
           1. A valid **Step Input** is received. A **Step Window** opens for a millisecond.
           2. The CV inputs of nodes listen for incoming triggers or gates. They can't accept multiple triggers during the **Step Window**, either they receive something or nothing.
           3. The **Step Window** closes: every node processes every input it received. **Sub** and **Add** inputs can cancel out each other.
-          4. The **Step** is applied: a **Global Trig** is sent, the **Global CV** is updated, the current node's **Play** indicator lights up, and the new current node sends out its outputs continuously, until the next **Step Window** _closes_.
+          4. The **Step** is applied: a **Global Trig** is sent, the **Global CV** is updated (with **Slide** if any), the current node's **Play** indicator lights up, and the new current node sends out its gate outputs continuously, until the next **Step Window** _closes_. Thus, the gates the current node is sending will be picked up during the next **Step Window**.
           5. The module waits 2 milliseconds before allowing another **Step Input** to be received.
-          6. Another **Step Input** is received, opening another **Step Window**.
-          7. The outputs from _step 4_ are still active: if they are patched, they will be picked up during this **Step Window**.
+          6. Once another **Step Input** is received, another **Step Window** opens for a millisecond.
+          7. The outputs from _step 4_ are still active: if they are patched, they are picked up during this **Step Window**.
           8. The **Step Window** closes, and the outputs from _step 4_ no longer send output.
 
-          In **VCV Rack**, every single patchcable adds one sample of latency. The **Step Windows** are meant to route signal through external logic modules before patching them back into **Modulus Salomonis Regis**. Even at the lowest audio sampling rate settings, so long as you pick modules that do not add latency, you can patch a signal through more than 20 logic processors.
+      ModuleBox(align="center")
+        :markdown-it
+          In **VCV Rack**, every single patchcable adds one sample of latency.
 
-          **Modulus Salomonis Regis** adds one millisecond of latency, and can't move through more than 333 nodes per second. It is not meant to be useful at normal audio rates.
+          The lowest sampling rate available is 44,100 samples per second: that means at least 44 samples per millisecond, the duration of a **Step Window**.
+
+          The purpose of **Step Windows** is to make it easier to patch signals through external logic modules before patching them back into **Modulus Salomonis Regis**. So long as you pick modules that do not add latency, you can patch a signal through more logic processors than you'd ever need and still make it in time to be picked up by the **Step Window**.
+
+          **Modulus Salomonis Regis** adds one millisecond of latency to incoming triggers, and can't move through more than 333 nodes per second: it is not meant to be usable at normal audio rates.
 
 
     ModuleSubSection(subtitle="LCD & Programmer" align="right")
@@ -189,7 +197,7 @@
         :markdown-it
           The **Key** and **Scale** knobs allow you to select the scale from those provided by [QQQQ](/modules/qqqq).
 
-          You can also use the **Poly External Scale** input to send the scale, using the [Poly External Scale](/poly-external-scale) format shared by my modules.
+          You can also use the **Poly External Scale** input to send the scale, using the [Poly External Scale](/modules/poly-external-scale) format shared by my modules.
 
       ModuleBox(align="right")
         ModuleImageInsert(src="/modules/modulus/min.png").float-left.clear-both
@@ -197,7 +205,7 @@
           The **Min** and **Max** knobs allow you to restrict the range of pitches that can be selected before the node wraps around. Their naming is only a suggestion: it's safe for the **Min** to be higher than the **Max**.
 
       ModuleBox(align="right")
-        ModuleImageInsert(src="/modules/modulus/min.png").float-left.clear-both
+        ModuleImageInsert(src="/modules/modulus/slide.png").float-left.clear-both
         :markdown-it
           **Slide**: The fun knob.
 
@@ -226,8 +234,8 @@
 
           - **Pitch**: Only twelve-tone equal temperament notes, no arbitrary CV. The asterisk stands for "Sharp". After changing the scale, pitches are not automatically quantized.
           - **Play**: One and only one node is playing at all times. In addition to the play arrow, the node being played flashes for a split second when reached: it helps identifying repeating nodes, and helps you follow the movement when the module is heavily self-patched.
-          - **Queue**: When added to the queue, a node can be picked by the **Queue Step Input**. The queue marker will be cleared if the node is played via **Queue Step Input**, or if a **Queue Step Input** picks another node while in **Reset** mode. When reached from another **Step Input**, the **Queue** marker is not lost.
-          - **Delay**: The last node to have played has this **Delay** marker. If a node repeats, it can both have the **Play** and **Delay** marker.
+          - **Queue**: When added to the queue, a node can be picked by the **Queue Step Input**. The **Queue** marker will be cleared if the node is played via **Queue Step Input**, or if a **Queue Step Input** picks another node while in **Reset** mode. When reached from another **Step Input** than the **Queue Step Input**, the **Queue** marker is not lost.
+          - **Delay**: The last node to have played has this **Delay** marker. If a node repeats, it will have the **Play** and the **Delay** marker at the same time.
 
       ModuleBox(jack="in" to="modulellus" :x="609/900" :y="574/760")
         :markdown-it
@@ -247,7 +255,7 @@
 
       ModuleBox(jack="in" to="modulellus" :x="639/900" :y="621/760")
         :markdown-it
-          The **V/Oct CV** output sends the V/Oct value of the node at all times. It's useful to craft chords.
+          The **V/Oct CV** output sends the V/Oct value of the node at all times. It is not affected by the **Slide** knob. It's useful to craft chords with **Modulellus Salomonis Regis**, the 4-node version.
 
       Protip
         :markdown-it
@@ -299,6 +307,20 @@
 
           —Pseudomonarchia Daemonum, De praestigiis daemonum, Johann Weyer
 
+
+    ModuleSubSection(subtitle="Right-click menu" align="center")
+      ModuleBox(align="center")
+        ModuleImageInsert(src="/modules/modulus/rightclick.png").float-right
+        .clear-both
+        :markdown-it
+          In addition to the **Reset options** explained above, from the **Right-click menu**, you can:
+
+          - **Copy Portable Sequence**: copies to the clipboard the current node pattern as a [Portable Sequence](https://github.com/squinkylabs/SquinkyVCV/blob/master/docs/clipboard-format.md).
+          - **Paste Portable Sequence**: pastes from the clipboard a **Portable Sequence**
+          - **Randomize all nodes**: sets all nodes to random notes in range from the current scale.
+          - **Quantize all nodes**: quantizes them to the current scale.
+
+
     ModuleSubSection(subtitle="Sigils")
       ModuleBox
         :markdown-it
@@ -314,7 +336,7 @@
   ModuleMainSection(title="Modulus Salomonis Regis" illustration="patch2" displaytitle="none")
       ModuleBox
         :markdown-it
-          Patch the **Latch** and the **Gate** output of the same node to inputs that partially cancel out each other. In this patch, the third node will alternates between gaining one and two scale degrees.
+          Patch the **Latch** and the **Gate** output of the same node to inputs that partially cancel out each other. In this patch, the third node will alternate between gaining one and two scale degrees.
 
   ModuleMainSection(title="Modulus Salomonis Regis" illustration="patch3" displaytitle="none")
       ModuleBox

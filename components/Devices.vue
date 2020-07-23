@@ -4,7 +4,7 @@ section#cards
   DeviceMenuItem(
     slug="splitmerge"
     title="Split & Merge"
-    description="Splirge, Splort, Smerge, Spleet, Swerge & Srot: tiny kawaii lil’ polyphonic splitters, mergers, sorters, randomizers, and rotators."
+    description="Splirge, Splort, Smerge, Spleet & Swerge: tiny kawaii lil’ polyphonic splitters, mergers, and sorters."
     rotate="-6"
     skewX="-8"
     skewY="-4"

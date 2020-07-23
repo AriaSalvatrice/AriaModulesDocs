@@ -64,7 +64,7 @@
 
       Protip(align="left")
         :markdown-it
-          Kick Drum ➔ Envelope Follower ➔ Slew Limiter ➔ Attenuator ➔ Cable Tension input.
+          Kick Drum ➔ Envelope Follower ➔ Offsetter ➔ Cable Tension input.
 
           You're welcome.
 

@@ -13,7 +13,7 @@
         :markdown-it
           **Quatherina the Quantum Duck** is best known for her aventures in the **Quartz Quasar**, in the **Quaint Quarry**, in the **Quarrelsome Quahaug Quagmire**, in the **Quarantined Quaestor Quadripoint**, and in **Canada** (the canonicity of that last adventure being a point of debate amongst **Quatherina**'s fans that I wish to remain neutral about).
 
-          To finance her adventuring lifestyle, she has graciously accepted payment (in the form of an undisclosed tonnage of Quaker Oats) to lend her name and likeness in endorsement of my synthesizer modules.
+          To finance her adventuring lifestyle, she has graciously accepted payment (in the form of an undisclosed tonnage of **Quaker Oats**) to lend her name and likeness in endorsement of my synthesizer modules.
 
       ModuleBox
         :markdown-it

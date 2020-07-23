@@ -135,8 +135,6 @@
 @keyframes cool-rotation
   0%
     transform rotate(0deg)
-  72%
-    z-index 160 // Bypasses chrome redraw issue
   75%
     transform rotate(0deg)
   84.99%

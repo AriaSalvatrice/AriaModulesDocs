@@ -4,7 +4,7 @@ div
   Welcome
   section.video-intro
     .container
-      VideoIntro
+      Download
   section.main-index
     .container
       Devices
@@ -18,7 +18,10 @@ div
 <script>
 export default {
   head: {
-    title: 'Aria Salvatrice Signature Series: VCV Rack-compatible Synthesizer Modules'
+    title: 'Aria Salvatrice Signature Series: VCV Rack-compatible Synthesizer Modules',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Cool and nice modules what for VCV Rack.' }
+    ]
   }
 }
 </script>

@@ -92,7 +92,7 @@
         :markdown-it
           At the top of **Splirge** is a 4-channel merger.
 
-      ModuleBox(jack="in" to="splitmerge" :x="502/570" :y="405/760")
+      ModuleBox(jack="out" to="splitmerge" :x="502/570" :y="405/760")
         :markdown-it
           At the bottom of **Splirge** is a 4-channel splitter.
         ModuleImageInsert(src="/modules/splitmerge/splirge.png").float-left

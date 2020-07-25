@@ -53,4 +53,9 @@ em, i, code
   -webkit-text-fill-color transparent
   z-index -20
 
+::selection
+  background $pink
+  color $darkest
+  text-shadow none
+
 </style>

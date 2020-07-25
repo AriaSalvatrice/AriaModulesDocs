@@ -109,7 +109,7 @@
           **Key Knob** and **Scale Knob**: Select which notes to quantize to when in Quantize mode. The available scales are the same as in the [QQQQ](/modules/qqqq) modules.
       ModuleBox(align="right" jack="out" to="darius" :x="411/960" :y="585/760")
         :markdown-it
-          **Poly External Scale**: Accepts the scale in the **Poly External Scale** format, compatible with my other modules. You can use Darius as an arpeggiator by sending it a chord rather than a full scale!
+          **Poly External Scale**: Accepts the scale in the [Poly External Scale](/modules/poly-external-scale) format, compatible with my other modules. You can use Darius as an arpeggiator by sending it a chord rather than a full scale!
       ModuleBox(align="right")
         :markdown-it
           **Slide**: The fun knob.
@@ -127,7 +127,7 @@
     ModuleSubSection(subtitle="Setting the random seed" align="left")
       ModuleBox
         :markdown-it
-          On the bottom-right, next to my signature, are two inputs used to fix the random seed, if you want Darius to be a bit more deterministic. If this section makes no sense, it's entirely safe to ignore.
+          On the bottom-right, next to my signature, are two inputs used to fix the random seed, if you want **Darius** to be a bit more deterministic. If this section makes no sense, it's entirely safe to ignore.
       ModuleBox(jack="out" to="darius" :x="647/960" :y="662/760")
         :markdown-it
           **Random**: When the input is not patched, or when it's receiving 0V, **Darius** flips the coin using its own random seed. But when it's receiving a seed, the coin flips become deterministic - it will take the same route every time, until the seed changes.
@@ -135,7 +135,7 @@
           Try out alternating, every bar, sending it an arbitrary fixed voltage such as 4.58V then 0V, to create call-and-response phrases where the first part is always the same.
       ModuleBox
         :markdown-it
-          **1st/All Rocker Switch**: Decides whether plan out the route on the first step, or whether to flip the coin at last moment.
+          **1st/All Rocker Switch**: Decides whether to plan out the route on the first step, or whether to flip the coin at last moment.
 
           In **1st** mode, going back and forth repeatedly results in the same path (unless you alter the routes), until the first node is reached from step 8 (it won't refresh it if you reach the first node from stepping back). In effect, it acts as a sample and hold for the **Random** input at the exact moment the first node is _left_.
 

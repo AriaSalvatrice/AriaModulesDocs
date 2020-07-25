@@ -2,9 +2,9 @@
 section#sidebar
   div
     h2 Info
-    a(href="https://library.vcvrack.com/?brand=Aria%20Salvatrice")
-      .subtitle Grab those bad boys from the VCV library
-      .title Installation
+    //- a(href="https://library.vcvrack.com/?brand=Aria%20Salvatrice")
+    //-   .subtitle Grab those bad boys from the VCV library
+    //-   .title Installation
     a(href="https://github.com/AriaSalvatrice/AriaVCVModules/blob/master/CHANGELOG.md")
       .subtitle Peep what’s cool and good
       .title Changelog
@@ -14,7 +14,7 @@ section#sidebar
     a(href="https://community.vcvrack.com/t/8208/")
       .subtitle Click here if you do not know fear
       .title Development builds
-    a(href="https://github.com/AriaSalvatrice/AriaVCVModules/blob/master/doc/plans.md")
+    nuxt-link(to="/plans")
       .subtitle Don’t get your hopes up lol
       .title Future Plans
     h2 Tribute

@@ -111,7 +111,13 @@
 
       ModuleBox(jack="out" to="qqqq" :x="266/600" :y="172/760" align="right")
         :markdown-it
-          The **Poly External Scale** input and output can encode a scale as a 12-channel polyphonic cable, where enabled notes have a continuous 10V signal (anything above 0.1V works), and disabled notes, 0V. **Poly External Scales** are supported by my other modules, such as **Arcane** and **Darius**. Try out hacking this data bus with my [splitters and mergers](/modules/splitmerge)!
+          The **Poly External Scale** input and output encodes a scale as a 12-channel polyphonic cable, where enabled notes have a continuous signal above 0.1V, and disabled notes, 0V.
+
+          [Poly External Scales](/modules/poly-external-scale) are supported by my other modules, such as **Arcane** and **Darius**. Try out hacking this data bus with my [splitters and mergers](/modules/splitmerge)!
+
+          **QQQQ** sends 8V for enabled semitones, except for the key, which is 10V, but only if that key is currently lit on the piano display.
+
+          Providing the key/tonic is for future expansion and patching tricks: currently, no module makes use of this information.
 
           After patching in an unchanging **External Scale**, if you edit the settings from another sources (e.g., turning the scale knob), you can unplug and replug the **External Scale** jack to reload it.
 
@@ -184,11 +190,20 @@
 
           You can right-click on those buttons to copy and paste scales. Mapping the scene slots via MIDI doesn't work well with every mapping module, but you can use the **Scene Input** jack below instead.
 
-          The scenes only save the scales: the positions of the knobs are not saved with them. If you want that behavior, try out [8FACE](https://library.vcvrack.com/Stoermelder-P1/EightFace).
+          The scenes only save the scales: the positions of the knobs are not saved with them. If you want that behavior, using [8FACE](https://library.vcvrack.com/Stoermelder-P1/EightFace) with **Quack** is the recommended method.
+
 
       ModuleBox(jack="out" to="qqqq" :x="497/600" :y="314/760")
         :markdown-it
           **Scene input**: Navigates the scenes via CV. Useful with a step sequencer! Accepts 0V~10V (each scene is 0.625V). When plugged in, the **Scene Slot** buttons can't be operated manually anymore.
+        //- :markdown-it
+        //-   **Scene input**: Navigates the scenes via CV. When plugged in, the **Scene Slot** buttons can't be operated manually anymore.
+
+        //-   There are two different modes, selected from the right-click menu. Pick the one that's the easiest for your particular use case:
+
+        //-   - **Select Scenes with 0V~10V** (default): Each scene is 0.625V. Useful with a step sequencer!
+        //-   - **Advance Scenes with trigs**: Each trigger or gate advances one scene, then it goes back to the first. It skips any empty scene at the end, but not empty scenes that are followed by non-empty ones.
+
 
     ModuleSubSection(subtitle="Keyboard I/O" align="right")
       ModuleBox(align="right")

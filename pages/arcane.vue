@@ -73,7 +73,7 @@
           If you combine them with [ML modules sequential switch 8 to 1](https://library.vcvrack.com/ML_modules/SeqSwitch), they can become a melody.
       ModuleBox(jack="in" to="arcane" :x="664/720" :y="154/760")
         :markdown-it
-          **Poly External Scale**: Sends the scale in the **Poly External Scale** format my other modules use. Try it with **Qqqq** or **Darius**!
+          **Poly External Scale**: Sends the scale in the [Poly External Scale](/modules/poly-external-scale) format my other modules use. Try it with **Qqqq** or **Darius**!
       ModuleBox(jack="in" to="arcane" :x="475/720" :y="319/760")
         :markdown-it
           **_Arcane Majeur_**: The number of the arcana, divided by 10.

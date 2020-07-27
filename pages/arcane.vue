@@ -45,10 +45,11 @@
           - **8 note pattern**: Every note from the selected scale, sorted in a random order. If the scale has fewer than 8 notes, up to 3 different notes will be repeated at the end, an octave higher.
           - **BPM**: Integer ranging from 60 to 180 BPM, with values between 90 and 150 twice as likely.
           - My **sincerest wish** of luck, love, health, and prosperity.
-      Protip(align="center")
+      ModuleBox(align="right")
         :markdown-it
           I pronounce a new oracle every single day at exactly 12:00 AM UTC without fail.
-
+      Protip(align="center")
+        :markdown-it
           Without exception, all of my oracles are correct.
 
     hr

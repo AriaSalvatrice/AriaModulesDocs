@@ -148,6 +148,7 @@ export default {
     color $yellow
   strong
     color $yellow
+    font-weight 400
   table
     margin-bottom 2rem
     tr
@@ -156,10 +157,10 @@ export default {
         color $yellow
         text-align left
         padding 0.1rem 0.7rem 0.1rem 0
-    tr
+        font-family $francois
+        font-weight 400
       td
         border-top $lightest 1px solid
         padding 0.1rem 0.7rem 0.1rem 0
-
 
 </style>

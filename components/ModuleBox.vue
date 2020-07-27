@@ -1,6 +1,6 @@
 <template lang="pug">
 .boxcontainer(v-bind:style="{ 'align-items': computedAlignment }" v-observe-visibility="{callback: updateVisibility}")
-  .box
+  .box(v-bind:style="{ 'max-width': width }")
     .jackContainer(ref="jackcontainer" v-bind:style="{ 'float': computedJackFloat }")
       template(v-if="jack === 'in'")
         img.jack.in(src="/modules/jack-in.png")
@@ -15,11 +15,10 @@
 .boxcontainer
   @apply flex flex-col;
   .box
-    width 30rem
-    max-width 90vw
+    min-width 30rem
     margin 5rem 0
     padding 1.5rem
-    color $lightest alpha($darkest, 0.86)
+    color $lightest alpha($darkest, 0.90)
     box-shadow -12px 12px $darkest
     text-shadow -1px 1px #00000088
     font-size 1.2rem
@@ -36,6 +35,7 @@
       margin-bottom 1.2rem
     strong
       color $yellow
+      font-weight 400
     ul
       li
         position relative
@@ -53,6 +53,20 @@
         position absolute
         left -1.2rem
         content counter(i) "."
+    table
+      margin-bottom 2rem
+      tr
+        th
+          border-bottom $lightest 3px solid
+          color $yellow
+          text-align left
+          padding 0.3rem 0.7rem 0.3rem 0
+          font-family $francois
+          font-weight 400
+      tr
+        td
+          border-top $lightest 1px solid
+          padding 0.3rem 0.7rem 0.3rem 0
 
 @screen lg
   .boxcontainer
@@ -63,8 +77,6 @@
 </style>
 
 <script>
-
-import _ from 'lodash'
 
 export default {
   props: {
@@ -93,6 +105,11 @@ export default {
       required: false,
       default: "",
     },
+    width: {
+      type: String,
+      required: false,
+      default: "30rem",
+    }
   },
   data() {
     return {

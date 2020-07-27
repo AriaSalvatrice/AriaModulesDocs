@@ -78,7 +78,7 @@
 
       ModuleBox
         :markdown-it
-          **Modulus Salomonis Regis** is much easier to understand through experimentation than explanation. If some part of the manual is hard to understand, just skip it for now.
+          **Modulus Salomonis Regis** is much easier to understand through experimentation than explanation. If any part of the manual is hard to understand, skip it for now.
 
 
       hr
@@ -140,7 +140,7 @@
         :markdown-it
           Not only there is no good justification for trying to understand how **Step Windows** work, it's actually harmful to even attempt to.
 
-      ModuleBox(align="center")
+      ModuleBox(align="center" width="60rem")
         :markdown-it
           Here's precisely how things happen:
 
@@ -155,13 +155,13 @@
 
       ModuleBox(align="center")
         :markdown-it
-          In **VCV Rack**, every single patchcable adds one sample of latency.
-
-          The lowest sampling rate available is 44,100 samples per second: that means at least 44 samples per millisecond, the duration of a **Step Window**.
+          In **VCV Rack**, every single patchcable adds one sample of latency to its signal, by design.
 
           The purpose of **Step Windows** is to make it easier to patch signals through external logic modules before patching them back into **Modulus Salomonis Regis**. So long as you pick modules that do not add latency, you can patch a signal through more logic processors than you'd ever need and still make it in time to be picked up by the **Step Window**.
 
-          **Modulus Salomonis Regis** adds one millisecond of latency to incoming triggers, and can't move through more than 333 nodes per second: it is not meant to be usable at normal audio rates.
+          The lowest sampling rate available is 44,100 samples per second: that means at least 44 samples per millisecond, the duration of a **Step Window**.
+
+          **Modulus Salomonis Regis** adds one millisecond of latency to incoming triggers, and can't move through more than 333 nodes per second. These limitations are negligible for most use cases.
 
 
     ModuleSubSection(subtitle="LCD & Programmer" align="right")
@@ -245,6 +245,8 @@
         :markdown-it
           The **Coin Flip** output (labeled "**?**") has a 50% chance of sending 10V continuously when a node starts **Playing**, until the next **Step Window** closes. When not playing, it sends 0V.
 
+          Want another probability than 50%? Use the **Gate** output with a [Bernoulli Gate](https://library.vcvrack.com/CountModula/Chances)!
+
       ModuleBox(jack="in" to="modulellus" :x="609/900" :y="668/760")
         :markdown-it
           The **Latch** output alternates sending 0V continuously and 10V continuously every time this specific node starts **Playing**, until the next **Step Window** closes. When not playing, it sends 0V.
@@ -252,6 +254,8 @@
       ModuleBox(jack="in" to="modulellus" :x="668/900" :y="668/760")
         :markdown-it
           The **Delay** output sends 10V continuously when the node obtains the **Delay** marker (that is, one step after it has **Played**), until the next **Step Window** closes. When not playing, it sends 0V.
+
+          Remember, in many configurations, a node can play twice in a row, sending 10V on its **Gate** and **Delay** output simultaneously.
 
       ModuleBox(jack="in" to="modulellus" :x="639/900" :y="621/760")
         :markdown-it

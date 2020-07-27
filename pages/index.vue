@@ -2,9 +2,9 @@
 div
   #bg-text(aria-hidden="true")
   Welcome
-  section.video-intro
-    .container
-      Download
+  //- section.video-intro
+  //-   .container
+  //-     VideoIntro
   section.main-index
     .container
       Devices

@@ -25,7 +25,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'theme-color', name: 'theme-color', content: '#fcaebb' }
+      { hid: 'theme-color', name: 'theme-color', content: '#fcaebb' },
+      { hid: 'twitter:card', name: 'twitter:card', content: "summary_large_image" },
+      { hid: 'twitter:site', name: 'twitter:site', content: "@AriaSalvatrice" },
+      { hid: 'twitter:title', name: 'twitter:title', content: "Aria Salvatrice's Synthesizer Modules for VCV Rack" },
+      { hid: 'twitter:description', name: 'twitter:description', content: "Aria Salvatrice Signature Series: VCV Rack compatible modules for live aleatoric music." },
+      { hid: 'twitter:image', name: 'twitter:image', content: "https://aria.dog/modules/card.png" },
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/modules/favicon-96x96.png' }

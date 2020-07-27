@@ -63,7 +63,7 @@ export default {
 #module-page
   hr
     border none
-    margin-bottom 15rem
+    margin-bottom 25rem
   .title
     position fixed
     top 0

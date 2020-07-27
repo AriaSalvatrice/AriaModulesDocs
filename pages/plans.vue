@@ -1,7 +1,7 @@
 <template lang="pug">
 article
   :markdown-it
-    First: **this page is not an invitation to be an asshole**. I'll work on stuff if and when I feel like it, which might very well be never. If this page leads to demanding jerks being demanding jerks, I'll just take it down.
+    First: **this page is not an invitation to be an asshole**. I'll work on stuff if I feel like it, when I feel like it. It might very well be never. **If this page leads to demanding jerks being demanding jerks, I'll just take it down, and not bother follwing up on those plans**.
 
     Here, I make public most of my future plans for this collection. Ideas take time to mature and your input can help them improve faster. Feel free to use Github issues, the VCV forums, or e-mail to discuss these.
 
@@ -9,14 +9,18 @@ article
 
     However, there is such a thing as duplication of effort. If you wish to adopt something you see here to implement it yourself, **a notification you're working on something similar is expected from you**.
 
+
+
+
     ### Manifesto
 
     - I will never create modules that already exist in a form that satisfies me.
     - I will never create modules I will not personally use to make and play music.
+    - I have high quality standards. I will not publicly release something of low quality.
     - I focus on live aleatoric techno music anchored in 4/4 time and Western tonality. I do not care much for ambient, drone, noise, "experimental", xenharmonic music, and other common uses of a modular. If my modules are useful for that purpose, that's only a side-effect.
-    - There is a ton I do not know. I barely know C++ or music theory. I don't know DSP at all. I want to focus on creating things that help me build skills transferable in other fields I'm interested in. I do not want to embark on learning dead ends that can't be folded back into future creative work.
-    - Every module I make must synergize with my own existing modules to form a coherent system.
-    - I do not own a single hardware module and I have no plans to. I do not care whether it's economically and technically feasible to create hardware versions of my modules. However, their operation must be realistic. No clicking on a LCD as the primary way to change its value. Right-click options limited to workflow macros impossible on hardware, and options that what would be a jumper on the back of a physical module.
+    - There is a ton I do not know. I barely know C++ or music theory. I don't know DSP at all. I want to focus on creating things that help me build skills transferable in other unrelated fields I'm interested in. I do not want to embark on learning dead ends that can't be folded back into future creative work.
+    - Every module I make must synergize with my own existing modules to form a coherent system, while also being a good citizen of the wider modular environment.
+    - I do not own a single hardware module, I have never even used one, and I have no plans to own any in the future. I do not care whether it's economically and technically feasible to create hardware versions of my modules, and do not consider hardware ergonomics in my digitally native modules, as they are not prototypes for physical products. Nonetheless, their operation must be realistic. No clicking on a LCD as the primary way to change its value. No changing labels that aren't on a LCD or segement display. Right-click options limited to workflow macros, and options sufficiently niche they would be a jumper on the back of a physical module.
     - I approach the modular as an artist, not as an electrical engineer.
     - I will only create modules for as long as the activity holds my interest, and not a minute longer.
     - Professional decorum can fuck off.
@@ -31,6 +35,7 @@ article
 
 
 
+
     ### Controllers that spring back
 
     Think pitchbend wheel. A series of controllers that can spring back, and can be used as pitchbend/modulation, with all sorts of neat features.
@@ -42,7 +47,9 @@ article
     - In pitchbend mode, you can set bend up and down range separately.
     - You can quantize input, and you can tell the pitchbend to aim for _n_ scale degrees above/below within the current scale/chord.
     - You can also quantize output for a stepped glissando.
+    - Automatic grid on a XY pad taking a scale as input.
     - Record buffer + replay movement. Possibility to start/stop recording on mouse down/up.
+
 
 
 
@@ -53,7 +60,7 @@ article
     Caveats:
 
     - They gotta be mostly standalone. Using a simple library off npm has a way to make your project size balloon to 400 MB because it adds 371 dependencies like [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) or kawaii_dojo_sushi_ikebana_shibari.js with a 34MB gif screencast for its README.
-    - They gotta work on the UI thread. I.E., they have to be mostly one-off data processing that are not guaranteed to finish fast. No oscillators or filters or DSP.
+    - They gotta work on the UI thread. I.E., they have to be mostly one-off data processing actions, and do not have to be guaranteed to execute fast. Format conversion and input parsing is good. Oscillators or filters or DSP should never happpen in JS outside of [Prototype](vcvrack.com/Prototype).
     - QuickJS has no network I/O
 
     Lemme know if you're after something in particular. While I might not be interested in implementing it, efforts on QQQQ should help others integrate JS stuff faster.
@@ -65,12 +72,13 @@ article
 
     The module is a sequencer with the basics to drive a simple song: a set BPM and clock output, 4x16 step patterns, 2x16 step notes, 1x16 step CV, quantizer scale, quantizer key.
 
-    You can only change a parameter every few seconds, and the BPM can only be changed by +5 and -5 increments.
+    You can only change a parameter every few seconds.
 
-    You cannot change the scale or key - it's provided by Arcane.
+    You cannot change the scale, key, or BPM - it's decided by Arcane.
 
     Your change is synchronized with every other instance of Soapstone in the entire world.
-    You are told how many users are connected, but you do not know who they are. The others are not required to collaborate with you, so you better be ready to roll with whatever they want to do.
+
+    You are told how many users are connected, but you do not know who they are. Others are not required to collaborate with you, so you better be ready to roll with whatever they want to do.
 
     You cannot set a private channel for collaboration. That's not the point. It's another social experiment like Arcane - and hopefuly one that will garner more interest.
 
@@ -78,9 +86,11 @@ article
 
 
 
+
     ### Rotating disk / vinyl turntable
 
     Controlled by hand or via a physical infinite encoder. You can adjust stuff like motor torque, friction, start and stop speed. It outputs its state with various kinds of CV. You can use it as a turntable, wind-up clockwork, power crank, wheel of fortune, jog wheel...
+
 
 
 
@@ -123,9 +133,9 @@ article
 
     The mouse gesture always start with a click, double-click, triple-click, or even, stay with me on this one: a quadruple click.
 
-    After that, the click is held and followed by gestures in the four directions. All the following gestures can be used: U, D, L, R, UD, DU, LR, RL. You can follow up a vertical gesture by a lateral one. Vertical and lateral states are mutually exclusives.
+    After that, the click is held and followed by gestures in the four directions. All the following gestures can be used: U, D, L, R, UD, DU, LR, RL. You can follow up a vertical gesture by a lateral one. There can be only one vertical and one lateral gesture accepted per cell.
 
-    Example gesture: Triple click → Up → Down → Left.
+    Example gesture: Triple click → Up → Down → Left
 
     #### Processor
 
@@ -174,6 +184,7 @@ article
     This project sounds fun, but it'd be a lot of work. I'd be much more eager to implement it if people are interested in doing something neat with it. Honk at me if you're the kinda non-pretentious artist doing participatory installation art and wanna collab or something.
 
     And if someone's willing to help with that problem, we could use machine learning to parse the large corpus of existing Stepmania charts out there, and use it to generate stepcharts on the fly.
+
 
 
 

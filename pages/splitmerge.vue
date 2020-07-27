@@ -7,7 +7,7 @@
     ModuleSubSection(subtitle="Chop chop")
       ModuleBox
         :markdown-it
-          What I started as a project too simple to mess up, meant to help me learn about C++ and VCV Rack module development, has grown to become a core aspect of my patching style, thanks to a unique feature: **Sorting polyphonic cables**.
+          What I started as a project too simple to mess up, a project meant to help me learn about C++ and VCV Rack module development, has grown to become a core aspect of my patching style, thanks to a unique feature: **sorting polyphonic cables**.
 
       Protip
         :markdown-it
@@ -71,11 +71,11 @@
 
   ModuleMainSection(title="Swerge" illustration="splitmerge")
     ModuleSubSection(subtitle="Dual 4-channel / Single 8 channel merger")
-      ModuleBox(jack="out" to="splitmerge" :x="412/570" :y="573/760")
+      ModuleBox(jack="in" to="splitmerge" :x="412/570" :y="573/760")
         :markdown-it
           **Swerge** merges 8 input channels into a polyphonic cable, or two banks of 4 input channels into a polyphonic cable each.
 
-      ModuleBox(jack="out" to="splitmerge" :x="412/570" :y="296/760")
+      ModuleBox(jack="in" to="splitmerge" :x="412/570" :y="296/760")
         ModuleImageInsert(src="/modules/splitmerge/swerge.png").float-left
         :markdown-it
           If the first output is plugged in, the LED turns off and **Swerge** operates in **Dual 4-channel mode** instead of **Single 8-channel mode**.

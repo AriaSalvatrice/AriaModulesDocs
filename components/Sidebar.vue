@@ -2,9 +2,9 @@
 section#sidebar
   div
     h2 Info
-    //- a(href="https://library.vcvrack.com/?brand=Aria%20Salvatrice")
-    //-   .subtitle Grab those bad boys from the VCV library
-    //-   .title Installation
+    a(href="https://library.vcvrack.com/?brand=Aria%20Salvatrice")
+      .subtitle Grab those bad boys from the VCV library
+      .title Installation
     a(href="https://github.com/AriaSalvatrice/AriaVCVModules/blob/master/CHANGELOG.md")
       .subtitle Peep what’s cool and good
       .title Changelog

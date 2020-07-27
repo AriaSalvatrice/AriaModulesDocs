@@ -17,9 +17,6 @@ section#cards
     skewX="-2"
     skewY="7"
   )
-
-  .picture#construction
-
   DeviceMenuItem(
     slug="darius"
     title="Darius"
@@ -28,10 +25,14 @@ section#cards
     skewX="-10"
     skewY="0"
   )
+
+  .picture#construction
+    div
+
   DeviceMenuItem(
     slug="modulus"
     title="Modulus Salomonis Regis"
-    description="Step sequencers conjuring grand knowledge of the arts for those who self-patch pleasing sigils."
+    description="Step sequencer conjuring grand knowledge of the arts for those who self-patch pleasing sigils.\nIncludes Modulus Salomonis Regis, Modulellus Salomonis Regis, and Modulissimus Salomonis Regis."
     rotate="-6"
     skewX="-3"
     skewY="7"
@@ -44,6 +45,10 @@ section#cards
     skewX="8"
     skewY="-11"
   )
+
+  .picture#blingee
+    div
+
   DeviceMenuItem(
     slug="undular"
     title="UnDuLaR"
@@ -96,7 +101,7 @@ export default {
     font-size 4rem
 
 .picture
-  height 20rem
+  height 30rem
   position relative
   z-index 100
   width 100%
@@ -106,4 +111,15 @@ export default {
 
 #construction
   background url('https://youpi.neocities.org/construction.gif') no-repeat center center
+  transform skew(8deg, 6deg)
+
+#blingee
+  div
+    margin-top 40px
+    background url('/modules/blingee.gif') no-repeat center center
+    transform skew(-7deg, -3deg)
+    width 400px
+    height 400px
+    box-shadow -6px 3px $dark, -2px -2px 0 $dark, 2px -2px 0 $dark, -2px 2px 0 $dark, 2px 2px 0 $dark
+
 </style>

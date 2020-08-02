@@ -1,6 +1,6 @@
 <template lang="pug">
 .boxcontainer(v-bind:style="{ 'align-items': computedAlignment }" v-observe-visibility="{callback: updateVisibility}")
-  .box(v-bind:style="{ 'max-width': width }")
+  .box(v-bind:style="{ 'width': width }")
     .jackContainer(ref="jackcontainer" v-bind:style="{ 'float': computedJackFloat }")
       template(v-if="jack === 'in'")
         img.jack.in(src="/modules/jack-in.png")
@@ -15,7 +15,7 @@
 .boxcontainer
   @apply flex flex-col;
   .box
-    min-width 30rem
+    max-width 90%
     margin 5rem 0
     padding 1.5rem
     color $lightest alpha($darkest, 0.90)
@@ -72,6 +72,7 @@
   .boxcontainer
     .box
       margin 5rem
+      min-width 30rem
       .jack
         display inline-block
 </style>

@@ -3,8 +3,6 @@ article
   :markdown-it
     ### Specification Draft
 
-    This format should not be considered stable yet. [Please see the conversation on the VCV Rack community forum](https://community.vcvrack.com/t/proposal-for-third-party-devs-poly-external-scale-format-revision-2/10497/).
-
     In my modules, I frequently make use of the ability to quantize to a scale or chord, using a polyphonic cable to transfer external scales between devices.
 
     I am calling it the **Poly External Scale** format. This format is drafted primarily considering the uses I personally have in mind for it, and the ways I expect to extend it.
@@ -40,6 +38,9 @@ article
     Aria Salvatrice                | **Modulus Salomonis Regis**                | Anything above 0.1V is a valid quantization target.
     Aria Salvatrice                | **Modulellus Salomonis Regis**             | Anything above 0.1V is a valid quantization target.
     Aria Salvatrice                | **Modulissimus Salomonis Regis**           | Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | **Grabby**                                 | Input only: Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | **Rotatoes**                               | Input only: Anything above 0.1V is a valid quantization target.
+
 
     Please contact me if you implement Poly External Scales to be added to this page.
 

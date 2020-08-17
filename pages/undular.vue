@@ -7,19 +7,9 @@
     ModuleSubSection(subtitle="Rack Scroller" align="right")
       ModuleBox(align="right")
         :markdown-it
-          Scroll your rack via CV! **UnDuLaR** adjusts to the size of your rack without any setup. You can also automate cable tension and opacity.
+          Scroll your rack via CV! **UnDuLaR** adjusts to the size of your rack without any setup.
 
-      ModuleBox(align="right")
-        :markdown-it
-          This is particularly useful for live performance with MIDI gear.
-
-          While you can bind every control, **I recommend using only one movement input**.
-
-          Build a rack that is no wider (or no taller) than your screen at your preferred zoom level, bind to MIDI either a trig input pair or a scroll input, then lock the unused axis with its button.
-
-          You do not want the mental overhead of navigating two dimensions while performing.
-
-          I only use the **Scroll Y** and **Opacity** inputs myself.
+          You can also automate cable tension and opacity. This is particularly useful for live performance with MIDI gear.
 
       ModuleBox(jack="out" to="undular" :x="51/150" :y="107/760")
         :markdown-it
@@ -35,7 +25,9 @@
 
       ModuleBox(jack="out" to="undular" :x="15/150" :y="390/760")
         :markdown-it
-          **Scroll X**, **Scroll Y**: Take 0V~10V, and smoothly scrolls your rack horizontally or vertically. You might want to invert the input if it feels more natural for you to operate your MIDI controller in the reverse direction.
+          **Scroll X**, **Scroll Y**: Take 0V~10V, and smoothly scrolls your rack horizontally or vertically.
+
+           You might want to invert the input if it feels more natural for you to operate your MIDI controller in the reverse direction. **[Rotatoes](/modules/remote-controllers)** are a good way to do that.
 
       ModuleBox
         :markdown-it
@@ -43,7 +35,9 @@
 
       ModuleBox(jack="out" to="undular" :x="51/150" :y="485/760")
         :markdown-it
-          **Zoom**: Takes 0V~10V, and zooms your rack in and out from 25% to 400%. **Zooming in and out in VCV Rack is neither fast nor reliable enough to ever attempt during live performance.** Expect broken graphics, CPU usage spikes, and audio crackles. This is due to VCV's graphics engine, there is nothing I can do to improve the performance.
+          **Zoom**: Takes 0V~10V, and zooms your rack in and out from 25% to 400%.
+
+          **Zooming in and out in VCV Rack is neither fast nor reliable enough to ever attempt during live performance.** Expect broken graphics, unreadable panels, CPU usage spikes, and audio crackles. This is due to VCV's graphics engine, there is nothing I can do to improve the performance.
 
       ModuleBox(jack="out" to="undular" :x="51/150" :y="562/760")
         :markdown-it
@@ -60,7 +54,9 @@
 
           As a safety measure, the status of those buttons isn't saved with your patch. When you reload it, they are always disabled.
 
-          It will be a little bit jittery, I can't help it. Those locks will only work if the three corresponding cable inputs for that axis are unplugged.
+          Those locks will only work if the three corresponding cable inputs for that axis are unplugged.
+
+          Trying to scroll on the disabled axis will be a little bit jittery, I can't help it.
 
       Protip(align="left")
         :markdown-it
@@ -87,6 +83,14 @@
           You can only use a single instance of **UnDuLaR** in your patch, as multiple instances would just fight each other for control.
 
           Additional instances past the first one do nothing.
+
+      ModuleBox(align="right")
+        :markdown-it
+          While you can bind every control, **I recommend using only one type of movement input and one axis of movement**. You do not want the mental overhead of navigating two dimensions while performing.
+
+          Build a rack that is no wider (or no taller) than your screen at your preferred zoom level, bind to MIDI either a trig input pair or a scroll input, then lock the unused axis with its button.
+
+          Personally, I bind **Scroll Y** to a fader (inverted via a **[rotato](/modules/remote-controllers)**), and **Opacity** to a knob.
 
       ModuleBox(align="right")
         :markdown-it

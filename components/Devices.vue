@@ -50,6 +50,15 @@ section#cards
     div
 
   DeviceMenuItem(
+    slug="remote-controllers"
+    title="Remote Controllers"
+    description="Pokies, Grabby, Rotatoes: tiny performance controllers with offset, inversion, latch & quantization features."
+    rotate="7"
+    skewX="9"
+    skewY="-5"
+  )
+
+  DeviceMenuItem(
     slug="undular"
     title="UnDuLaR"
     description="Rack scroller for live performance, controllable via CV/MIDI."

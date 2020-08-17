@@ -157,9 +157,9 @@
         :markdown-it
           In **VCV Rack**, every single patchcable adds one sample of latency to its signal, by design.
 
-          The purpose of **Step Windows** is to make it easier to patch signals through external logic modules before patching them back into **Modulus Salomonis Regis**. So long as you pick modules that do not add latency, you can patch a signal through more logic processors than you'd ever need and still make it in time to be picked up by the **Step Window**.
+          The purpose of **Step Windows** is to make it easier to patch signals through external logic modules before patching them back into **Modulus Salomonis Regis**. So long as you pick logic modules that work at audio rates and do not add latency, you can patch a signal through more logic processors than you'd ever need and still make it in time to be picked up by the **Step Window**.
 
-          The lowest sampling rate available is 44,100 samples per second: that means at least 44 samples per millisecond, the duration of a **Step Window**.
+          The lowest sampling rate generally used for audio is 44,100 samples per second: that means at least 44 samples per millisecond, the duration of a **Step Window**.
 
           **Modulus Salomonis Regis** adds one millisecond of latency to incoming triggers, and can't move through more than 333 nodes per second. These limitations are negligible for most use cases.
 

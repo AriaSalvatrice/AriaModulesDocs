@@ -7,7 +7,7 @@
     ModuleSubSection(subtitle="Pokies, Grabby, Rotatoes")
       ModuleBox
         :markdown-it
-          A trio of 3hp performance controllers, ideal for complex MIDI controller setups.
+          A trio of 3hp lightweight performance controllers, perfect to simplify complex MIDI controller setups.
 
       ModuleBox
         ModuleImageInsert(src="/modules/remote-controllers/rectangle.png").float-right
@@ -108,7 +108,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Blank Plate - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Remote Controllers - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
   }
 }
 </script>

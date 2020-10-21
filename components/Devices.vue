@@ -9,6 +9,7 @@ section#cards
     skewX="-8"
     skewY="-4"
   )
+
   DeviceMenuItem(
     slug="qqqq"
     title="Quatherina’s Quality Quad Quantizer"
@@ -17,6 +18,7 @@ section#cards
     skewX="-2"
     skewY="7"
   )
+
   DeviceMenuItem(
     slug="darius"
     title="Darius"
@@ -37,6 +39,7 @@ section#cards
     skewX="-3"
     skewY="7"
   )
+
   DeviceMenuItem(
     slug="arcane"
     title="Arcane"
@@ -44,6 +47,15 @@ section#cards
     rotate="4"
     skewX="8"
     skewY="-11"
+  )
+
+  DeviceMenuItem(
+    slug="psychopump"
+    title="Psychopump"
+    description="Send your beats straight to Hades with 8 triggered channels of CV presets, Sample & Hold, with randomization and quantization features. Pairs great with percussive sound sources."
+    rotate="-5"
+    skewX="-8"
+    skewY="-6"
   )
 
   .picture#blingee

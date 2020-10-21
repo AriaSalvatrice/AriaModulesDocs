@@ -8,9 +8,13 @@ Thanks to everyone who created open-source modules I could learn from and make s
 
 Thanks to [Andrew Belt](https://vcvrack.com/) for creating VCV Rack and providing code suggestions.
 
-Thanks to [Jerry Sievert](https://legitimatesounding.com/) and [cschol](https://github.com/cschol) for their help with [QuickJS](https://github.com/tonaljs/tonal) integration.
+Thanks to [Jerry Sievert](https://legitimatesounding.com/) and [cschol](https://github.com/cschol) for their help with [QuickJS](https://bellard.org/quickjs/) integration.
 
-Thanks to [Squinky Labs](https://github.com/squinkylabs/SquinkyVCV), [Stoermelder](https://github.com/stoermelder/vcvrack-packone), [David O'Rourke](https://github.com/david-c14/SubmarineFree) for technical advice.
+Thanks to [Silvio Kunaschk](https://github.com/qno/) for their help with [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) continuous integration.
+
+Thanks to [Squinky Labs](https://github.com/squinkylabs/SquinkyVCV), [Stoermelder](https://github.com/stoermelder/vcvrack-packone), [David O'Rourke](https://github.com/david-c14/SubmarineFree), and [Anthony Lexander Matos](https://github.com/anlexmatos) for technical advice.
+
+Thanks to [Omri Cohen](https://www.youtube.com/channel/UCuWKHSHTHMV_nVSeNH4gYAg) for featuring my modules in livestreams.
 
 Thanks to [Ken McAloon](https://whatsinaname.xyz/) for Latin language translations.
 
@@ -24,23 +28,9 @@ Thanks to [my dog Ornstein](https://ornstein.neocities.org/) for being a good do
 
 Thanks to my music-making LGBBQT internet shitposting gang for introducing me to VCV and modular synthesis as something that's not just for old guys with more disposable income than impetus to write fresh songs.
 
+<big>**But most of all, thanks to YOU for using my art.**</big>
 
-<big>But most of all, thanks to YOU for using my art.</big>
-
-The modules use the following fonts:
-- [Francois One](https://fonts.google.com/specimen/Francois+One) by [Vernon Adams](http://sansoxygen.com/) for titles.
-- [Nova](https://fontlibrary.org/en/font/nova) by [Wojciech Kalinowski](https://fontlibrary.org/en/member/wmk69) for faceplages.
-- [Fixed_v01](http://www.orgdot.com/aliasfonts/index.htm) by [Orgdot](http://www.orgdot.com/aliasfonts/index.htm) for LCDs.
-- [DSEG](https://www.keshikan.net/fonts-e.html) by [Keshikan](https://www.keshikan.net/) for segment displays.
-
-
-The **Arcane** module uses Tarot cards altered from [Yoav Ben-Dov's CBD Tarot](https://www.cbdtarot.com/).
-
-The **UnDuLaR** module background uses the traditional yagasuri kimono pattern as provided by [ULOCO, UOTOMIZU](https://forallcreators.com/yagasuri-background/).
-
-[QuickJS](https://github.com/tonaljs/tonal) is used in some modules under the terms of the [MIT license](https://github.com/AriaSalvatrice/AriaVCVModules/tree/master/doc/LICENSE_TonalJs.txt)
-
-[TonalJS](https://bellard.org/quickjs/) is used in some modules under the terms of the [MIT license](https://github.com/AriaSalvatrice/AriaVCVModules/tree/master/doc/LICENSE_QuickJS.txt)
+![](/modules/animedance.gif)
 
 :::
 </template>

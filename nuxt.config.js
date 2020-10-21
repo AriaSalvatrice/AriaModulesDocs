@@ -6,11 +6,6 @@ export default {
   */
   telemetry: false,
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
-  /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
@@ -28,7 +23,7 @@ export default {
       { hid: 'theme-color', name: 'theme-color', content: '#fcaebb' },
       { hid: 'twitter:card', name: 'twitter:card', content: "summary_large_image" },
       { hid: 'twitter:site', name: 'twitter:site', content: "@AriaSalvatrice" },
-      { hid: 'twitter:title', name: 'twitter:title', content: "Aria Salvatrice's Synthesizer Modules for VCV Rack" },
+      { hid: 'twitter:title', name: 'twitter:title', content: "Aria Salvatrice's Synthesizer Modules compatible with VCV Rack" },
       { hid: 'twitter:description', name: 'twitter:description', content: "Aria Salvatrice Signature Series: VCV Rack compatible modules for live aleatoric music." },
       { hid: 'twitter:image', name: 'twitter:image', content: "https://aria.dog/modules/card.png" },
     ],

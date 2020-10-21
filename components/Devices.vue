@@ -52,7 +52,7 @@ section#cards
   DeviceMenuItem(
     slug="psychopump"
     title="Psychopump"
-    description="Send your beats straight to Hades with 8 triggered channels of CV presets, Sample & Hold, with randomization and quantization features. Pairs great with percussive sound sources."
+    description="Send your beats straight to Hades with 8 triggered channels of CV presets and Sample & Hold. Randomization and quantization features. Pairs great with percussive sound sources."
     rotate="-5"
     skewX="-8"
     skewY="-6"

@@ -7,13 +7,13 @@
     ModuleSubSection(subtitle="Send your beats straight to Hades" align="right")
       ModuleBox(align="right")
         :markdown-it
-          The big idea of **Psychopump** is simple: send it gates to any of its 8 channels, and it outputs the corresponding CV preset.
+          The big idea of **Psychopump** is simple: send gates to any of its 8 channels, it outputs the corresponding CV preset.
 
       ModuleBox(align="center")
         :markdown-it
           Why you would want to use it is more complex: it doesn't pair well with everything.
 
-          It was initially created to conserve CPU when using [PSI OP](https://library.vcvrack.com/FehlerFabrik-Suite/PSIOP), a fun FM drum module capable of a wide range of sounds, and like many oscillators, too CPU-hungry to use one instance per drum sound.
+          It was initially created to conserve CPU when using [PSI OP](https://library.vcvrack.com/FehlerFabrik-Suite/PSIOP), a fun FM drum module capable of a wide range of sounds, and like many oscillators, too CPU-hungry to use one separate instance per drum sound.
 
           But Psychopump is not just about saving CPU, it can do much more.
 
@@ -52,7 +52,7 @@
       ModuleBox(align="center")
         ModuleImageInsert(src="/modules/psychopump/randomoffset.png").float-left
         :markdown-it
-          Increase the random offset of the columns with the first **CV** output. It's normal it won't do anything yet.
+          Increase the random offset of the column of the first **CV** output. Simply moving the knob won't do anything, it's normal.
 
         ModuleImageInsert(src="/modules/psychopump/plusminus.png").float-left
         :markdown-it
@@ -73,15 +73,11 @@
     hr
 
     ModuleSubSection(subtitle="Gates processing" align="right")
-      ModuleBox(align="right")
-        :markdown-it
-          Let's look in greater detail at the controls at the left of the device.
-
       ModuleBox(jack="out" to="psychopump" :x="30/1500" :y="142/760" align="right")
         :markdown-it
-          The 8 **Gate** inputs accept gates or triggers. In default **Monophonic** operation, when a gate is received, it makes the corresponding channel active.
+          The 8 **Gate** inputs accept gates or triggers. In default **Monophonic** operation, when a gate is received, it makes the corresponding channel active, whether it's routed or not.
 
-          In case of simultaneous gates, the lowest inputs have the highest priority.
+          In case of simultaneous gates, the highest numbered inputs have the highest priority. There are multiple ways of making creative use of that behavior.
 
       ModuleBox(jack="in" to="psychopump" :x="79/1500" :y="674/760" align="right")
         :markdown-it
@@ -90,15 +86,19 @@
       ModuleBox(align="right")
         ModuleImageInsert(src="/modules/psychopump/gatelabel.png").float-left
         :markdown-it
-          By clicking the Label button, you can name the corresponding gate.
+          By clicking the **Label** button, you can name the corresponding gate.
         ModuleImageInsert(src="/modules/psychopump/lcdlabel.png").float-left
         :markdown-it
-          When you operate knobs, the names show up on the LCD.
+          When you operate knobs, the names show up on the **LCD**.
 
       ModuleBox(align="right")
         ModuleImageInsert(src="/modules/psychopump/mutesolo.png").float-left
         :markdown-it
-          Those four buttons control whether the gates are output. The **Mute** and **Solo** button work the same way they do on a mixer, while the **1** and **2** buttons let you choose where to route the gate.
+          Those four buttons control whether the gates are output.
+
+          The **Mute** and **Solo** button work the same way they do on a mixer. They mute the input rather than the output, so when muted, receiving a gate won't activate a channel.
+
+          The **1** and **2** buttons let you choose to which output to route the gate.
 
           Even if a gate is not routed to an output, receiving it will still make the channel active.
 
@@ -157,10 +157,10 @@
       ModuleBox
         ModuleImageInsert(src="/modules/psychopump/outputlabel.png").float-right
         :markdown-it
-          By clicking the Label button, you can name the corresponding output.
+          By clicking the **Label** button, you can name the corresponding output.
         ModuleImageInsert(src="/modules/psychopump/lcdlabel.png").float-right
         :markdown-it
-          When you operate knobs, the names show up on the LCD.
+          When you operate knobs, the names show up on the **LCD**.
 
     hr
 

@@ -36,5 +36,5 @@ B&W versions:
 $ yarn install
 $ yarn dev
 $ yarn build
-$ yarn export
+$ yarn generate
 ```

@@ -14,6 +14,9 @@ section#sidebar
     a(href="https://community.vcvrack.com/t/8208/")
       .subtitle Click here if you do not know fear
       .title Development builds
+    nuxt-link(to="/poly-external-scale")
+      .subtitle Advanced control voltage rituals
+      .title Poly External Scales
     nuxt-link(to="/plans")
       .subtitle Don’t get your hopes up lol
       .title Future Plans

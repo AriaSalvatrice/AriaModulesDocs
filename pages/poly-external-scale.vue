@@ -3,11 +3,11 @@ article
   :markdown-it
     In my modules, I frequently make use of the ability to quantize to a scale or chord, using a polyphonic cable to transfer external scales between devices.
 
-    I am calling it the **Poly External Scale** format. This format is drafted primarily considering the uses I personally have in mind for it, and the ways I expect to extend it.
+    I am calling it the **Poly External Scale** format. This format is drafted primarily considering the uses I personally have in mind for it, and the many ways I expect to use it in the future.
 
     I encourage other developers to use it, if it makes sense for their module. And if it doesn't make sense, I'm requesting you avoid using the term "Poly External Scale" in your modules - it's a specific enough name it should not be a problem.
 
-    ### Poly External Scale
+    ### Specification
 
     - The format is concerned with sharing data about the 12 semitones of an octave. It is not concerned with _which_ octave it is.
     - A Poly External Scale has 12 channels, one per semitone of the octave. The first channel is C, the second C#, and so on. Twelve-tone equal temperament is assumed.
@@ -26,26 +26,26 @@ article
 
     ### VCV Rack compatible modules that work with Poly External Scales
 
-    Developer                      | Module name                                | Notes
-    -------------------------------|--------------------------------------------|---------------
-    Aria Salvatrice                | **Arcane**                                 | Enabled notes are 8V. No tonic information provided.
-    Aria Salvatrice                | **Atout**                                  | Enabled notes are 8V. No tonic information provided.
-    Aria Salvatrice                | **Darius**                                 | Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Quatherina's Quality Quad Quantizer**    | Input: Anything above 0.1V is a valid quantization target. Output: Enabled notes are 8V. If the note on the Key knob is part of the current scale on the piano display, then it is sent as 10V.
-    Aria Salvatrice                | **Quack**                                  | Same as above.
-    Aria Salvatrice                | **Q<**                                     | Input only: Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Quale**                                  | Anything above 0.1V is a valid chord target in Scale > Chord. Enabled notes are 8V in Chord > Scale.
-    Aria Salvatrice                | **Modulus Salomonis Regis**                | Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Modulellus Salomonis Regis**             | Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Modulissimus Salomonis Regis**           | Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Grabby**                                 | Input only: Anything above 0.1V is a valid quantization target.
-    Aria Salvatrice                | **Rotatoes**                               | Input only: Anything above 0.1V is a valid quantization target.
-    Grande                         | **Quant**                                  | While not supporting PES, independently implemented a compatible format: disabled steps are 0V, enabled steps are 10V, but it will also accept 8V. Input only.
-    Grande                         | **Scale**                                  | While not supporting PES, independently implemented a compatible format: disabled steps are 0V, enabled steps are 10V. Output only.
-    Purr Software                  | **Meander**                                | Output only: current notes of Meander's scale are 8V, and the tonic 10V.
+    Developer                      | Module name                                                                                 | Notes
+    -------------------------------|---------------------------------------------------------------------------------------------|---------------
+    Aria Salvatrice                | [Arcane](https://library.vcvrack.com/AriaSalvatrice/Arcane)                                 | Enabled notes are 8V. No tonic information provided.
+    Aria Salvatrice                | [Atout](https://library.vcvrack.com/AriaSalvatrice/Atout)                                   | Enabled notes are 8V. No tonic information provided.
+    Aria Salvatrice                | [Darius](https://library.vcvrack.com/AriaSalvatrice/Darius)                                 | Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Quatherina's Quality Quad Quantizer](https://library.vcvrack.com/AriaSalvatrice/Qqqq)      | Input: Anything above 0.1V is a valid quantization target. Output: Enabled notes are 8V. If the note on the Key knob is part of the current scale on the piano display, then it is sent as 10V.
+    Aria Salvatrice                | [Quack](https://library.vcvrack.com/AriaSalvatrice/Quack)                                   | Same as above.
+    Aria Salvatrice                | [Q<](https://library.vcvrack.com/AriaSalvatrice/Q)                                          | Input only: Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Quale](https://library.vcvrack.com/AriaSalvatrice/Quale)                                   | Anything above 0.1V is a valid chord target in Scale > Chord. Enabled notes are 8V in Chord > Scale.
+    Aria Salvatrice                | [Modulus Salomonis Regis](https://library.vcvrack.com/AriaSalvatrice/Solomon8)              | Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Modulellus Salomonis Regis](https://library.vcvrack.com/AriaSalvatrice/Solomon4)           | Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Modulissimus Salomonis Regis](https://library.vcvrack.com/AriaSalvatrice/Solomon16)        | Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Grabby](https://library.vcvrack.com/AriaSalvatrice/Grabby)                                 | Input only: Anything above 0.1V is a valid quantization target.
+    Aria Salvatrice                | [Rotatoes](https://library.vcvrack.com/AriaSalvatrice/Rotatoes4)                            | Input only: Anything above 0.1V is a valid quantization target.
+    Grande                         | [Quant](https://library.vcvrack.com/GrandeModular/Quant)                                    | While not supporting PES, independently implemented a compatible format: disabled steps are 0V, enabled steps are 10V, but it will also accept 8V. Input only.
+    Grande                         | [Scale](https://library.vcvrack.com/GrandeModular/Scale)                                    | While not supporting PES, independently implemented a compatible format: disabled steps are 0V, enabled steps are 10V. Output only.
+    Purr Software                  | [Meander](https://library.vcvrack.com/PS-PurrSoftware/Meander)                              | Output only: current notes of Meander's scale are 8V, and the tonic 10V.
 
 
-    Please contact me if you implement Poly External Scales to be added to this page.
+    Please contact me at <woof@aria.dog> if you implement Poly External Scales to be added to this page.
 
 
 </template>

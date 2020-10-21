@@ -162,11 +162,20 @@
 
       ModuleBox(align="right")
         :markdown-it
-          **Darius** has a simple panel, easily understood features, and can never be truly tamed - by design. It is meant to be easy to learn, surprising to use, and impossible to master. It can be used as a melody sequencer, an arpeggiator, a source of modulation, a drum sequencer, even as a worthless waveshaper.
+          **Darius** has a simple panel, easily understood features, and can never be truly tamed - by design. It is meant to be easy to learn, surprising to use, and impossible to master. It can be used as a melody sequencer, an arpeggiator, a source of modulation, or even as a drum sequencer.
 
-          Many of its apparent limitations can be overcome with a bit of creative patching.
+          Many of its apparent limitations can be overcome with a bit of creative patching, and its randomness can be kept in check by manipulating the seed.
 
-          It works wonderfully with [Stoermelder](https://library.vcvrack.com/Stoermelder-P1)'s [CV-MAP](https://library.vcvrack.com/Stoermelder-P1/CVMap) to give you CV control over the knobs, and [8FACE](https://library.vcvrack.com/Stoermelder-P1/EightFace) to make it easy to switch between multiple preset banks.
+      ModuleBox(align="right")
+        :markdown-it
+          In its default configuration, the possibility space of **Darius** is very large: if you restrict it, it becomes less chaotic.
+
+          The default routes follow a normal distribution: one that skews very heavily towards the center. By loading a different route preset from the right-click menu, you can have a more constrained starting point.
+
+      ModuleBox(align="right")
+        :markdown-it
+
+          **Darius** works wonderfully with [Stoermelder](https://library.vcvrack.com/Stoermelder-P1)'s [CV-MAP](https://library.vcvrack.com/Stoermelder-P1/CVMap) to give you CV control over the knobs, and [8FACE](https://library.vcvrack.com/Stoermelder-P1/EightFace) to make it easy to switch between multiple preset banks.
 
 
 

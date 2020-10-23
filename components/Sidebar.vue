@@ -3,7 +3,7 @@ section#sidebar
   div
     h2 Info
     a(href="https://library.vcvrack.com/?brand=Aria%20Salvatrice")
-      .subtitle Grab those bad boys from the VCV library
+      .subtitle Grab those bad boys
       .title Installation
     a(href="https://github.com/AriaSalvatrice/AriaVCVModules/blob/master/CHANGELOG.md")
       .subtitle Peep what’s cool and good
@@ -17,20 +17,11 @@ section#sidebar
     nuxt-link(to="/poly-external-scale")
       .subtitle Advanced control voltage rituals
       .title Poly External Scales
-    nuxt-link(to="/plans")
-      .subtitle Don’t get your hopes up lol
-      .title Future Plans
     h2 Tribute
     nuxt-link(to="/donations")
       .subtitle Ca$h mon€¥
       .title Donations
     h2 Contact
-    a(href="https://github.com/AriaSalvatrice/AriaVCVModules/issues")
-      .subtitle Your call is important to us
-      .title Bug reports
-    a(href="https://github.com/AriaSalvatrice/AriaVCVModules/blob/master/CONTRIBUTING.md")
-      .subtitle That would rule TBH
-      .title Contributing
     a(href="mailto:woof@aria.dog")
       .subtitle woof@aria.dog
       .title

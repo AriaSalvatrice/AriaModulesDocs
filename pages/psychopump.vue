@@ -193,7 +193,7 @@
 
       ModuleBox(align="center")
         :markdown-it
-          By default, the device is in **Monophonic** mode, which is the easiest one to program. It works well with modules such as  [PSI OP](https://library.vcvrack.com/FehlerFabrik-Suite/PSIOP), as the constant retriggering has an interesting sonic character, and also with monophonic modules capable of sustaining the previous decaying voice, such as [Mutable Instruments Rings](https://mutable-instruments.net/modules/rings/), available as [Resonator](https://library.vcvrack.com/AudibleInstruments/Rings) in VCV's library.
+          By default, the device is in **Monophonic** mode, which is the easiest one to program. It works well with modules such as  [PSI OP](https://library.vcvrack.com/FehlerFabrik-Suite/PSIOP), as the constant retriggering has an interesting sonic character, and also with monophonic modules capable of sustaining the previous decaying voice, such as [Mutable Instruments Rings](https://mutable-instruments.net/modules/rings/), available as [Resonator](https://library.vcvrack.com/AudibleInstruments/Rings).
 
           In **3 Channel Rotation** mode, the 3 most recently triggered channels are output, allowing you to have multiple voices at once, without reserving 8 voices. It's good for polyphonic modules that consume CPU time even when a voice is idle, such as [Palette](https://library.vcvrack.com/Atelier/AtelierPalette).
 
@@ -222,7 +222,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Psychopump - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Psychopump - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

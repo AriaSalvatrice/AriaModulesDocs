@@ -226,7 +226,7 @@
           Text input is always imported starting from the first scene. And remember: **QQQQ** only thinks in scales, not in chords. After you import a chord progression, **QQQQ** doesn't care about the voicing of the chord. It's all folded back to a single octave.
       ModuleBox(align="right")
         :markdown-it
-          Under the hood, **QQQQ** makes use of [Tonal.js](https://github.com/tonaljs/tonal)' knowledge of chords. Yup, this module runs javascript! Same [QuickJS](https://bellard.org/quickjs/) engine as [VCV Prototype](https://vcvrack.com/Prototype).
+          Under the hood, **QQQQ** makes use of [Tonal.js](https://github.com/tonaljs/tonal)' knowledge of chords. Yup, this module runs javascript! Same [QuickJS](https://bellard.org/quickjs/) engine as [Prototype](https://vcvrack.com/Prototype).
 
           Javascript usage is limited to what it does best: fuzzy text parsing, done outside of the audio thread to avoid sound glitches. All the number crunching in **QQQQ** is efficient C++.
 
@@ -284,9 +284,9 @@
     ModuleSubSection(subtitle="Performance")
       ModuleBox
         :markdown-it
-          While there are smaller and simpler quantizers than **QQQQ** available in the VCV library, you will find that **QQQQ** is nonetheless faster than many options with fewer features, thanks to its aggressive sub-sampling and culling of unused outputs:
+          While there are smaller and simpler quantizers than **QQQQ** available, you will find that **QQQQ** is nonetheless faster than many options with fewer features, thanks to its aggressive sub-sampling and culling of unused outputs:
 
-          - **Sub-sampling**: For almost every single use case, there is no reason for a quantizer to operate at audio rates (which most VCV modules do). Every 32 samples is plenty - that's still faster than once per millisecond at 44,100Hz, making artifacts inaudible.
+          - **Sub-sampling**: For almost every single use case, there is no reason for a quantizer to operate at audio rates (which most modules do). Every 32 samples is plenty - that's still faster than once per millisecond at 44,100Hz, making artifacts inaudible.
           - **Culling**: When the output of a column is unplugged and its visualization disabled, the column in question does not process input, and thus consumes almost no CPU. Unnecessary calculations are also skipped when Sample & Hold is used. As a side-effect that is not worth the performance cost to correct, you will sometimes see a polyphonic input yield a monophonic output, or the other way around, until you send a Sample & Hold trigger.
 
 
@@ -301,7 +301,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Quatherina’s Quality Quad Quantizer - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Quatherina’s Quality Quad Quantizer - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

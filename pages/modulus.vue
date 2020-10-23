@@ -155,7 +155,7 @@
 
       ModuleBox(align="center")
         :markdown-it
-          In **VCV Rack**, every single patchcable adds one sample of latency to its signal, by design.
+          In software, every single patchcable adds one sample of latency to its signal, by design.
 
           The purpose of **Step Windows** is to make it easier to patch signals through external logic modules before patching them back into **Modulus Salomonis Regis**. So long as you pick logic modules that work at audio rates and do not add latency, you can patch a signal through more logic processors than you'd ever need and still make it in time to be picked up by the **Step Window**.
 
@@ -368,7 +368,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Modulus Salomonis Regis - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Modulus Salomonis Regis - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

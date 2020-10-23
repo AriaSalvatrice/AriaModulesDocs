@@ -6,8 +6,6 @@ Credits & Namedrops
 
 Thanks to everyone who created open-source modules I could learn from and make songs with.
 
-Thanks to [Andrew Belt](https://vcvrack.com/) for creating VCV Rack and providing code suggestions.
-
 Thanks to [Jerry Sievert](https://legitimatesounding.com/) and [cschol](https://github.com/cschol) for their help with [QuickJS](https://bellard.org/quickjs/) integration.
 
 Thanks to [Silvio Kunaschk](https://github.com/qno/) for their help with [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) continuous integration.
@@ -26,11 +24,13 @@ Thanks to [Mog](https://github.com/JustMog/Mog-VCV) for Mog.
 
 Thanks to [my dog Ornstein](https://ornstein.neocities.org/) for being a good dog.
 
-Thanks to my music-making LGBBQT internet shitposting gang for introducing me to VCV and modular synthesis as something that's not just for old guys with more disposable income than impetus to write fresh songs.
+Thanks to my music-making LGBBQT internet shitposting gang for introducing me to modular synthesis as something that's not just for old guys with more disposable income than impetus to write fresh songs.
 
 <big>**But most of all, thanks to YOU for using my art.**</big>
 
 ![](/modules/animedance.gif)
+
+VCV Rack is a trademark of the VCV Rack project. This web site is neither affiliated nor endorsed by the VCV Rack project.
 
 :::
 </template>

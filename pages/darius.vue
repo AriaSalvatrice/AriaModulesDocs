@@ -189,7 +189,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Darius - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Darius - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

@@ -37,7 +37,7 @@
         :markdown-it
           **Zoom**: Takes 0V~10V, and zooms your rack in and out from 25% to 400%.
 
-          **Zooming in and out in VCV Rack is neither fast nor reliable enough to ever attempt during live performance.** Expect broken graphics, unreadable panels, CPU usage spikes, and audio crackles. This is due to VCV's graphics engine, there is nothing I can do to improve the performance.
+          **Zooming in and out is neither fast nor reliable enough to ever attempt during live performance.** Expect broken graphics, unreadable panels, CPU usage spikes, and audio crackles. This is due to the graphics engine, there is nothing I can do to improve the performance.
 
       ModuleBox(jack="out" to="undular" :x="51/150" :y="562/760")
         :markdown-it
@@ -115,7 +115,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'UnDuLaR - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'UnDuLaR - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

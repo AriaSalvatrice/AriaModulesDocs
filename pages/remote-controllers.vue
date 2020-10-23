@@ -18,7 +18,7 @@
         :markdown-it
           Some suggestions of modules that were tested to control perfectly those **pokies**, **grabbies** and **rotatoes**:
 
-          - [VCV MIDI-Map](https://library.vcvrack.com/Core/MIDI-Map)
+          - [MIDI-Map](https://library.vcvrack.com/Core/MIDI-Map)
           - [23volts Multimap](https://library.vcvrack.com/23volts/MultimapK)
           - [stoermelder µMAP](https://library.vcvrack.com/Stoermelder-P1/CVMapMicro)
           - [stoermelder ReMOVE Lite](https://library.vcvrack.com/Stoermelder-P1/ReMoveLite)
@@ -52,7 +52,7 @@
 
       Protip(align="right")
         :markdown-it
-          There are at least four different colors of automation rectangle indicators in the entire VCV library! Can you discover them all and bind them to pokies?
+          There are at least four different colors of automation rectangle indicators in the entire library! Can you discover them all and bind them to pokies?
 
           Be careful, some shades are very similar but still different!
 
@@ -108,7 +108,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Remote Controllers - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Remote Controllers - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

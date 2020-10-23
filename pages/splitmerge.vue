@@ -7,7 +7,7 @@
     ModuleSubSection(subtitle="Chop chop")
       ModuleBox
         :markdown-it
-          What I started as a project too simple to mess up, a project meant to help me learn about C++ and VCV Rack module development, has grown to become a core aspect of my patching style, thanks to a unique feature: **sorting polyphonic cables**.
+          What I started as a project too simple to mess up, a project meant to help me learn about C++ and synthesizer module development, has grown to become a core aspect of my patching style, thanks to a unique feature: **sorting polyphonic cables**.
 
       Protip
         :markdown-it
@@ -110,7 +110,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Split & Merge Collection - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Split & Merge Collection - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

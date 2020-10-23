@@ -85,7 +85,7 @@
           **Reset** and **Run**: They control all the outputs below them. Operate them manually using the button, or synchronize multiple devices by sending them a trigger from a single source, for example the [Little Utils Button](https://library.vcvrack.com/LittleUtils/Button).
       ModuleBox(jack="in" to="arcane" :x="664/720" :y="319/760")
         :markdown-it
-          **BPM**: Follows the [VCV Standard](https://vcvrack.com/manual/VoltageStandards#pitch-and-frequencies) for clocks and LFOs where 0V stands for 120BPM.
+          **BPM**: Follows the [Standard](https://vcvrack.com/manual/VoltageStandards#pitch-and-frequencies) for clocks and LFOs where 0V stands for 120BPM.
           You can send that signal to a compatible clock module such as [Impromptu Modular's Clocked](https:/library.vcvrack.com/ImpromptuModular/Clocked) if you require a clock (for example, for swing, or other time signatures than 4/4).
       ModuleBox(jack="in" to="arcane" :x="664/720" :y="426/760")
         :markdown-it
@@ -153,7 +153,7 @@
 
       ModuleBox(align="right")
         :markdown-it
-          **There is no offline mode, and no built-in way to load older fortunes, by design.** These are multiplayer-only oracles. But I won't prevent you from editing the .json files in the `AriaSalvatrice/Arcane/` directory of your VCV Rack user directory, if you really must. Every downloaded fortune is archived locally, a full archive is available [from GitHub](https://github.com/AriaSalvatrice/Arcane), and if a local file exists for today, it will not be checked against the server.
+          **There is no offline mode, and no built-in way to load older fortunes, by design.** These are multiplayer-only oracles. But I won't prevent you from editing the .json files in the `AriaSalvatrice/Arcane/` directory of your Rack user directory, if you really must. Every downloaded fortune is archived locally, a full archive is available [from GitHub](https://github.com/AriaSalvatrice/Arcane), and if a local file exists for today, it will not be checked against the server.
 
       Protip(align="right")
         :markdown-it
@@ -177,11 +177,11 @@
 
           The CBD deck was restored in 2008-2011 from the original 18th century deck by tarot expert [Dr. Yoav Ben-Dov's](https://www.cbdtarot.com/).
 
-          It was chosen for its traditional significance, the quality of its imagery, and the simplicity of its broad lines being well suited to VCV's limited vector rendering engine.
+          It was chosen for its traditional significance, the quality of its imagery, and the simplicity of its broad lines being well suited to the limited vector rendering engine.
 
           While there is great variety in decks across many different Tarot traditions, Tarot of Marseilles imagery does not vary significantly across decks. The exact same subjects are drawn from the same angle, leaving very little room for the artist to re-interpret the themes.
 
-          A few figures are generally depicted nude, and while the style of the CBD deck is obviously neither graphic nor intended to titillate, I took the liberty to slightly alter a few cards to remove details, in particular the Devil's codpiece, as most users will download my module from the VCV library without being forewarned about contents a small minority would find upsetting. I hope you will understand my decision.
+          A few figures are generally depicted nude, and while the style of the CBD deck is obviously neither graphic nor intended to titillate, I took the liberty to slightly alter a few cards to remove details, in particular the Devil's codpiece, as most users will download my module from the library without being forewarned about contents a small minority would find upsetting. I hope you will understand my decision.
 
       ModuleBox(align="right")
         :markdown-it
@@ -194,7 +194,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Arcane - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Arcane - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

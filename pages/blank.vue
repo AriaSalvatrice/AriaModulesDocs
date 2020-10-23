@@ -28,7 +28,7 @@
 export default {
   layout: 'module',
   head: {
-    title: 'Blank Plate - Aria Salvatrice’s VCV Rack-compatible Synthesizer Modules'
+    title: 'Blank Plate - Aria Salvatrice’s Synthesizer Modules'
   }
 }
 </script>

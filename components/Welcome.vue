@@ -23,17 +23,17 @@ header.welcome
         |
         a(href="https://ariasalvatrice.bandcamp.com/") Pastoral Industrial
         |
-        | music happen, and made a buncha synth modules compatible with
-        |
-        a(href="https://vcvrack.com/") VCV Rack
-        |
-        | for my own use.
+        | music happen, and made a buncha synth modules for my own use.
       img(src="signature-welcome.png" alt="signature").float-left.w-48
       p
         | They are the
         |
         span.signatureseries Aria Salvatrice Signature Series
-        | .  They’re growing into an integrated system for performing aleatoric techno. Lotsa artists found them inspiring for many genres of music. You can grab them for free!
+        | . Lotsa artists found them inspiring for many genres of music. You can grab them for free!
+      p
+        | Unfortunately,&nbsp;
+        a(href="https://rentry.org/awrgi") due to the toxicity of the leadership of the VCV Rack project
+        | , this collection is currently put on hold. I look forward to resuming it in a healthier community. Until such a community comes along, I hope you will enjoy the existing modules, and my other creative ventures.
     #intro-2
       | heres the stuff ➞
 </template>

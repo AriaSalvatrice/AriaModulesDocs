@@ -32,8 +32,8 @@ header.welcome
         | . Lotsa artists found them inspiring for many genres of music. You can grab them for free!
       p
         | Unfortunately,&nbsp;
-        a(href="https://rentry.org/awrgi") due to the toxicity of the leadership of the VCV Rack project
-        | , this collection is currently put on hold. I look forward to resuming it in a healthier community. Until such a community comes along, I hope you will enjoy the existing modules, and my other creative ventures.
+        a(href="https://rentry.org/awrgi") this collection is currently put on hold.
+        | I look forward to resuming it when the opportunity arises. Until then, I hope you will enjoy the existing modules, and my other creative ventures.
     #intro-2
       | heres the stuff ➞
 </template>

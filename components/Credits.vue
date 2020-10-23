@@ -30,7 +30,7 @@ Thanks to my music-making LGBBQT internet shitposting gang for introducing me to
 
 ![](/modules/animedance.gif)
 
-VCV Rack is a trademark of the VCV Rack project. This web site is neither affiliated nor endorsed by the VCV Rack project.
+VCV and VCV Rack are a trademark of VCV. This web site is neither affiliated nor endorsed by the VCV project.
 
 :::
 </template>

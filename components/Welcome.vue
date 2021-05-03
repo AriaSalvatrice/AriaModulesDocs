@@ -30,10 +30,12 @@ header.welcome
         |
         span.signatureseries Aria Salvatrice Signature Series
         | . Lotsa artists found them inspiring for many genres of music. You can grab them for free!
+      br
       p
-        | Unfortunately,&nbsp;
-        a(href="https://rentry.org/awrgi") this collection is currently put on hold.
-        | I look forward to resuming it when the opportunity arises. Until then, I hope you will enjoy the existing modules, and my other creative ventures.
+        | Unfortunately, this collection is discontinued and no longer supported, and won't be updated in the future,&nbsp;
+        a(href="https://aria.dog/barks/why-i-will-never-create-modules-for-vcv-rack-anymore/") due to VCV Rack's behavior towards third party developers
+        | . I look forward to resuming this collection as a standlone modular sequencer in the future.
+        | Until then, I hope you will enjoy the existing modules for as long they still work.
     #intro-2
       | heres the stuff ➞
 </template>
